@@ -26,6 +26,9 @@ let markerSecretLayer=L.layerGroup().addTo(map);
 let markerMobLayer=L.layerGroup().addTo(map);
 let markerLieuLayer=L.layerGroup().addTo(map);
 let markerMarchandLayer=L.layerGroup().addTo(map);
+let markerDonjonLayer=L.layerGroup().addTo(map);
+let markerBossLayer=L.layerGroup().addTo(map);
+let markerRessourcesLayer=L.layerGroup().addTo(map);
 var iconForgeron = L.icon({ iconUrl: 'icon/Forgeron.png', iconSize: [32, 32], iconAnchor: [16,32], popupAnchor: [0, -32] });
 var iconAlchimiste = L.icon({ iconUrl: 'icon/Alchimiste.png', iconSize: [32, 32], iconAnchor: [16,32], popupAnchor: [0, -32] });
 var iconQuete = L.icon({ iconUrl: 'icon/Quete.png', iconSize: [32, 32], iconAnchor: [16,32], popupAnchor: [0, -32] });
@@ -33,10 +36,13 @@ var iconSecret = L.icon({ iconUrl: 'icon/Secret.png', iconSize: [32, 32], iconAn
 var iconMob = L.icon({ iconUrl: 'icon/Mob.png', iconSize: [32, 32], iconAnchor: [16,32], popupAnchor: [0, -32] });
 var iconLieu = L.icon({ iconUrl: 'icon/Lieu.png', iconSize: [32, 32], iconAnchor: [16,32], popupAnchor: [0, -32] });
 var iconMarchand = L.icon({ iconUrl: 'icon/Marchand.png', iconSize: [32, 32], iconAnchor: [16,32], popupAnchor: [0, -32] });
+var iconDonjon = L.icon({ iconUrl: 'icon/Donjon.png', iconSize: [32, 32], iconAnchor: [16,32], popupAnchor: [0, -32] });
+var iconBoss = L.icon({ iconUrl: 'icon/Boss.png', iconSize: [32, 32], iconAnchor: [16,32], popupAnchor: [0, -32] });
+var iconRessources = L.icon({ iconUrl: 'icon/Ressources.png', iconSize: [32, 32], iconAnchor: [16,32], popupAnchor: [0, -32] });
 
-var markerValue={'Forgeron':1,'Alchimiste':1,'Quete':1,'Secret':1,'Mob':1,'Lieu':1,'Marchand':1};
-var markerLayer={'Forgeron':markerForgeronLayer,'Alchimiste':markerAlchimisteLayer,'Quete':markerQueteLayer,'Secret':markerSecretLayer,'Mob':markerMobLayer,'Lieu':markerLieuLayer,'Marchand':markerMarchandLayer};
-var markerIcon={'Forgeron':iconForgeron,'Alchimiste':iconAlchimiste,'Quete':iconQuete,'Secret':iconSecret,'Mob':iconMob,'Lieu':iconLieu,'Marchand':iconMarchand};
+var markerValue={'Forgeron':1,'Alchimiste':1,'Quete':1,'Secret':1,'Mob':1,'Lieu':1,'Marchand':1,'Donjon':1,'Boss':1,'Ressources':1};
+var markerLayer={'Forgeron':markerForgeronLayer,'Alchimiste':markerAlchimisteLayer,'Quete':markerQueteLayer,'Secret':markerSecretLayer,'Mob':markerMobLayer,'Lieu':markerLieuLayer,'Marchand':markerMarchandLayer,'Donjon':markerDonjonLayer,'Boss':markerBossLayer,'Ressources':markerRessourcesLayer};
+var markerIcon={'Forgeron':iconForgeron,'Alchimiste':iconAlchimiste,'Quete':iconQuete,'Secret':iconSecret,'Mob':iconMob,'Lieu':iconLieu,'Marchand':iconMarchand,'Donjon':iconDonjon,'Boss':iconBoss,'Ressources':iconRessources};
 
 
 document.getElementById('ResetView').addEventListener('click',()=>{
@@ -64,7 +70,7 @@ function toggleMarker(button){
 }
 
 function loadMarker(){
-  var files=['Forgeron.json','Alchimiste.json','Quete.json','Secret.json','Mob.json','Lieu.json','Marchand.json']
+  var files=['Forgeron.json','Alchimiste.json','Quete.json','Secret.json','Mob.json','Lieu.json','Marchand.json','Donjon.json','Boss.json']
   files.forEach(chemin =>{
     fetch('marker/'+chemin)
     .then(response=> response.json())
@@ -110,3 +116,10 @@ function affichageDescription(data){
   }
 }
 
+const boutons = document.querySelectorAll('.btn-categorie');
+
+boutons.forEach(bouton => {
+  bouton.addEventListener('click', () => {
+    bouton.classList.toggle('active');
+  });
+});

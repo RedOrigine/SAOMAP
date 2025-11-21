@@ -70,7 +70,7 @@ function toggleMarker(button){
 }
 
 function loadMarker(){
-  var files=['Forgeron.json','Alchimiste.json','Quete.json','Secret.json','Mob.json','Lieu.json','Marchand.json','Donjon.json','Boss.json']
+  var files=['Forgeron.json','Alchimiste.json','Quete.json','Secret.json','Mob.json','Lieu.json','Marchand.json','Donjon.json','Boss.json','Ressources.json']
   files.forEach(chemin =>{
     fetch('marker/'+chemin)
     .then(response=> response.json())

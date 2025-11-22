@@ -105,9 +105,12 @@ function affichageDescription(data){
     div.appendChild(h1)
   }
   if(data.description){
-    let p=document.createElement('p')
-    p.textContent=data.description
-    div.appendChild(p)
+    data.description.forEach(desc =>{
+      let p=document.createElement('p')
+      p.textContent=desc
+      div.appendChild(p)
+    })
+    
   }
   if(data.coordGame){
     let p=document.createElement('p')

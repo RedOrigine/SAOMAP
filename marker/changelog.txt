@@ -1,0 +1,8 @@
+Version 1.0
+
+-Palier 1
+-Marqueur (a titre indicatif ils seront tous disponible quand le serv ouvrira)
+-Activation/Désactivation de marqueur pars ça catégorie
+-Affichage de la description/coordonnées in-game etc (WIP)
+
+Site toujours en phase de développement!

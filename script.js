@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener('DOMContentLoaded',()=>{
   let changelog=document.getElementById('changelog')
-  fetch("/changelog.txt")
+  fetch("changelog.txt")
   .then(response=>{
     return response.text()})
   .then(text=>{

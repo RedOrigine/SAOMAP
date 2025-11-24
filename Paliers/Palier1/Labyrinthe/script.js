@@ -1,4 +1,4 @@
-import * as general from '/scriptGeneral.js';
+import * as general from '/SAOMAP/scriptGeneral.js';
 
 // #region Etage 1:--------------------------------------------------------------------------------------------------------------------------------------------------------------------
   
@@ -321,38 +321,38 @@ var filesMarker=['Forgeron.json',"PointCle.json","Salle.json"]
 //#endregion 
 
 //Methode Général(changer la map):--------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    var map=mapEtage2
-    const w=450;
-    const h=450;
+    // var map=mapEtage2
+    // const w=450;
+    // const h=450;
 
-    // Ajouter une grille
-        const step = 3; // taille des cellules en pixels
-        const gridLayer = L.layerGroup();
-        var cheminEntier=[]
-        // Lignes horizontales
-        for(let y = 0; y <= h; y += step){
-          gridLayer.addLayer(L.polyline([[y,0],[y,w]], {color:'gray', weight:1, opacity:0.5}));
-        }
+    // // Ajouter une grille
+    //     const step = 3; // taille des cellules en pixels
+    //     const gridLayer = L.layerGroup();
+    //     var cheminEntier=[]
+    //     // Lignes horizontales
+    //     for(let y = 0; y <= h; y += step){
+    //       gridLayer.addLayer(L.polyline([[y,0],[y,w]], {color:'gray', weight:1, opacity:0.5}));
+    //     }
 
-        // Lignes verticales
-        for(let x = 0; x <= w; x += step){
-          gridLayer.addLayer(L.polyline([[0,x],[h,x]], {color:'gray', weight:1, opacity:0.5}));
-        }
+    //     // Lignes verticales
+    //     for(let x = 0; x <= w; x += step){
+    //       gridLayer.addLayer(L.polyline([[0,x],[h,x]], {color:'gray', weight:1, opacity:0.5}));
+    //     }
 
-        gridLayer.addTo(map);
+    //     gridLayer.addTo(map);
 
-        map.on('click', function(e) {
-      const lat = e.latlng.lat;
-      const lng = e.latlng.lng;
+    //     map.on('click', function(e) {
+    //   const lat = e.latlng.lat;
+    //   const lng = e.latlng.lng;
 
-      // Calculer l'origine de la cellule
-      const cellX = Math.floor(lng / step) * step;
-      const cellY = Math.floor(lat / step) * step;
+    //   // Calculer l'origine de la cellule
+    //   const cellX = Math.floor(lng / step) * step;
+    //   const cellY = Math.floor(lat / step) * step;
 
-      // Coordonnées du centre de la cellule
-      const centerX = cellX + step / 2;
-      const centerY = cellY + step / 2;
-      cheminEntier.push([centerY, centerX])
-      console.log('Centre de la case :', [centerY, centerX]);
-      console.log('Chemin entier: ',cheminEntier)
-    });
+    //   // Coordonnées du centre de la cellule
+    //   const centerX = cellX + step / 2;
+    //   const centerY = cellY + step / 2;
+    //   cheminEntier.push([centerY, centerX])
+    //   console.log('Centre de la case :', [centerY, centerX]);
+    //   console.log('Chemin entier: ',cheminEntier)
+    // });

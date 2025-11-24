@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'SAO UI';
-    src: url('/SAOUI-Regular.woff2') format('woff2'),
-        url('/SAOUI-Regular.woff') format('woff');
+    src: url('/SAOMAP/SAOUI-Regular.woff2') format('woff2'),
+        url('/SAOMAP/SAOUI-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;

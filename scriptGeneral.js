@@ -1,4 +1,4 @@
-import * as icon from './scriptIcon.js'
+import * as icon from '/SAOMAP/scriptIcon.js'
 
 export function toggleLayerChemin(button,valueLayerChemin,cheminLayer,map){
   let id=button.id

@@ -70,10 +70,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     })
     palier.addEventListener('click',(e)=>{
-      fetch('/Paliers/'+e.target.id+'/index.html', { method: 'HEAD' })
+      fetch('/SAOMAP/Paliers/'+e.target.id+'/index.html', { method: 'HEAD' })
     .then(res => {
         if (res.ok) {
-            window.location.href='/Paliers/'+e.target.id+'/index.html'
+            window.location.href='/SAOMAP/Paliers/'+e.target.id+'/index.html'
         } else {
             console.log('Le fichier n’existe pas.');
         }
@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener('DOMContentLoaded',()=>{
   let changelog=document.getElementById('changelog')
-  fetch("changelog.txt")
+  fetch("/SAOMAP/changelog.txt")
   .then(response=>{
     return response.text()})
   .then(text=>{

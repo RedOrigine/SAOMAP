@@ -1,89 +1,166 @@
-body{
-    background: linear-gradient(to bottom, lightblue ,darkblue, black)
+@font-face {
+    font-family: 'SAO UI';
+    src: url('/SAOUI-Regular.woff2') format('woff2'),
+        url('/SAOUI-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+html, body {
+  margin: 0;    
+  padding: 0;     
+  height: 100%;    
+  min-height: 100vh;
+  font-family: 'SAO UI';
+  background: linear-gradient(to bottom, black ,darkgray, gray, orange,darkorange);
+  box-sizing: border-box;
+
+}
+
+.parent1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  align-items: center;            
+  padding: 20px ;
+}
+
+.nom, .linkStart {
+  width: 90vw;         
+  text-align: center; 
+  padding: 10vh;
+}
+
+
+#logo{
+  width: 80vw;
+  
+}     
+ /* .nom {
+    
+    
+}
+
+ #logo{
+  width: 150%;
+  
 } 
 
-.parent {
+.linkStart {
+   
+}  */
+
+.linkStart{
+  font-size: 70px;
+  font-weight: bold;
+  color:lightblue;
+}
+  
+.wave span {
+  display: inline-block;
+  transform: translateY(0);
+  animation: jump 2s ease infinite;
+}
+
+@keyframes jump {
+  0% { transform: translateY(0); }
+  25% { transform: translateY(-20px); }
+  50% { transform: translateY(0); }
+  75% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+
+
+.parent2{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
     gap: 8px;
+    /* height: 100vh;
+    width: 100vw; */
 }
     
-.div1{
+
+.div2 {
+    grid-column: span 3 / span 3;
+    justify-items: center;
+  }
+
+#titleCP{
+  margin: 0;
+  padding: 20px;
+  font-size: 6rem;
+  color: lightblue;
+}
+.div3 {
+    grid-column-start: 5;
     display: flex;
-    justify-content: space-around;
     align-items: center;
 }
-.div2 {
-    grid-row: span 2 / span 2;
+.nomguilde{
+  font-size: 3rem;
+  transform: rotate(90deg);
+  background: linear-gradient(to top, orange, red);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+#logoguilde{
+  height: 172px;
+}
+.div4 {
+  display: grid;
+    grid-column: span 3 / span 3;
+    grid-row: span 4 / span 4;
+    grid-column-start: 2;
+    grid-row-start: 2;
+    place-items: center;
+    gap:50px
+}
+
+.btn-palier{
+  font-family: 'SAO UI';
+  font-size: 4rem;
+  width: 50vw;
+  height: 10vh;
+  padding: 0;
+  border-radius: 25px;
+  background: linear-gradient(90deg,black,darkred,red,darkorange, darkorange, red,darkred,black);
+  border: 1px solid black;
+}
+
+.div5 {
+    grid-row: span 4 / span 4;
     grid-column-start: 1;
     grid-row-start: 2;
+    display: grid;
+    place-items: center;
+    gap:5px
+}
+#listeCatePalier{
+  margin: 5px;
+  padding: 5px;
+  font-size: 2rem;
+  text-decoration: underline;
+  
 }
 
-.div3 {
-    grid-row: span 2 / span 2;
-    grid-column-start: 1;
-    grid-row-start: 4;
+.btn-liste{
+  background: linear-gradient(90deg,black,darkred,red,darkorange, darkorange, red,darkred,black);
+  border-radius: 25px;
+  border: 1px solid black;
+  width: 10vw;
+  height: 2.5vh;
+}
+.btn-liste.active{
+  background:linear-gradient(90deg,black,gray,lightgray,gray,black);
 }
 
-.div4 {
-
-    display: flex;           
-    justify-content: center; 
-    align-items: center;
-    grid-column: span 4 / span 4;
-    grid-row: span 5 / span 5;
-    grid-column-start: 2;
-    grid-row-start: 1;
-    border-radius: 13px;
-    background: linear-gradient(45deg, white ,orange, lightgray,gray,black)
-}
-
-#carte {
-  width: 800px;
-  height: 800px;
-  border-radius: 50%;
-  overflow: hidden;
-  box-shadow: 0 0 30px rgba(0,0,0,0.8);
-  background: black;
-}   
-
-.rectgris {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100%;               
-    width: 100%;                
-    border-radius: 15px;         
-    background: linear-gradient(45deg, orange, gray)}
-
-.buttonReset{
-    
-    text-align: center;
-    padding: 0% 15% ;
-    border-radius: 15px;
-    background-color: rgb(69, 75, 243);
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 100%;
-    font-weight: bold;
-}
-
-#categorie_toggle{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.btn-categorie{
-    padding: 1% 100% ;
-    border-radius: 15px;
-    background-color: orange;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 100%;
-    font-weight: bold;
-
-}
-.btn-categorie.active{
-    background-color: lightgray;
+.div6 {
+    grid-row: span 4 / span 4;
+    grid-column-start: 5;
+    grid-row-start: 2;
 }

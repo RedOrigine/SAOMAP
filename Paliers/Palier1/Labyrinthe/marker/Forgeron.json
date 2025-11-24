@@ -1,0 +1,13 @@
+[{
+    "name":"Forgeron1",
+    "categorie":"forgeron-1",
+    "coord":[205.5, 187.5],
+    "icon":"iconForgeron"
+},
+{
+    "name":"Forgeron2",
+    "categorie":"forgeron-1",
+    "coord":[322.5, 88.5],
+    "icon":"iconForgeron"
+
+}]

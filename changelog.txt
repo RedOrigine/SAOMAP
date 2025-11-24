@@ -1,8 +1,15 @@
-Version 1.0
+Version 1.1
 
--Palier 1
+-Palier 1(Monde + Labyrinthe)
 -Marqueur (a titre indicatif ils seront tous disponible quand le serv ouvrira)
--Activation/Désactivation de marqueur pars ça catégorie
+-Activation/Désactivation de marqueur par ça catégorie
 -Affichage de la description/coordonnées in-game etc (WIP)
+-Ajout d'un hub + hub Palier1
+-Ajout des 3 etages du Labyrinthe
+-Ajout des chemins (Classique/Forgeron/Optionel) pour l'étage 1
+-Ajout des marker pour l'étage 1
 
-Site toujours en phase de développement!
+Prochainement:
+
+-Ajout de bouton retour
+-Ajout des chemins/marker pour l'étage 2/3

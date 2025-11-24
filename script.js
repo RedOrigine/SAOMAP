@@ -1,128 +1,105 @@
-var map = L.map('carte', {
-  crs: L.CRS.Simple,
-  minZoom: -3,
-  maxZoom: 2.5,
-  zoomSnap: 0.1
+const textElement = document.getElementById("waveText");
+const text = textElement.textContent;
+textElement.textContent = ""; // nettoie
+
+text.split("").forEach((letter, i) => {
+  const span = document.createElement("span");
+  span.textContent = letter;
+  span.style.animationDelay = `${i * 0.2}s`;
+  textElement.appendChild(span);
 });
 
-let mapWidth, mapHeight, bounds, mapOverlay;
+function afficherPagePalier(){
+    console.log('je suis la')
+    let parent1=document.getElementById('parent1');
+    let parent2=document.getElementById('parent2');
+    parent1.style.display="none";
+    parent2.style.display="grid";
+}
 
-const defaultImg = new Image();
-defaultImg.onload = () => {
-  mapWidth = defaultImg.width;
-  mapHeight = defaultImg.height;
-  bounds = [[0, 0], [mapHeight, mapWidth]];
-  initialbounds=bounds;
-  mapOverlay = L.imageOverlay("SAOPalier1.png", bounds).addTo(map);
-  map.fitBounds(bounds);
-};
-defaultImg.src = "SAOPalier1.png"; 
+function retourPagePalier(){
+    let parent1=document.getElementById('parent1');
+    let parent2=document.getElementById('parent2');
+    parent1.style.display="hidden";
+    parent2.style.display="show";
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    let div=document.getElementById('palier')
+    let liste=document.getElementById('liste')
+    let divEtapes=[]
+    for(let i=1;i<=100;i+=5){
+      let divEtape=document.createElement('div')
+      divEtape.id=+i+'-'+(i+4)
+      divEtape.classList.add('div4')
+      divEtapes.push(divEtape)
+      let listeButton=document.createElement('button');
+      listeButton.id='Palier '+i+'-'+(i+4);
+      listeButton.textContent='Palier '+i+'-'+(i+4);
+      listeButton.classList.add('btn-liste')
+      liste.appendChild(listeButton)
+      for(let j=0;j<=4;j++){
+        let button=document.createElement('button')
+        button.id='Palier'+(j+i)
+        button.textContent='Palier'+(j+i)
+        button.classList.add(('btn-palier'))
+        divEtape.appendChild(button)
+      }
+      if(i==1){
+        div.appendChild(divEtape)
+      }else{
+        divEtape.style.display='none';
+        div.appendChild(divEtape)
+        listeButton.classList.toggle('active')
+      }
+      
+    }
+    liste.addEventListener('click',(e)=>{
+      if (!e.target.classList.contains('btn-liste')) return;
+      document.querySelectorAll('.btn-liste').forEach(btn => btn.classList.add('active'));
+      e.target.classList.add('btn-liste');
 
 
-let markerForgeronLayer=L.layerGroup().addTo(map);
-let markerAlchimisteLayer=L.layerGroup().addTo(map);
-let markerQueteLayer=L.layerGroup().addTo(map);
-let markerSecretLayer=L.layerGroup().addTo(map);
-let markerMobLayer=L.layerGroup().addTo(map);
-let markerLieuLayer=L.layerGroup().addTo(map);
-let markerMarchandLayer=L.layerGroup().addTo(map);
-let markerDonjonLayer=L.layerGroup().addTo(map);
-let markerBossLayer=L.layerGroup().addTo(map);
-let markerRessourcesLayer=L.layerGroup().addTo(map);
-var iconForgeron = L.icon({ iconUrl: 'icon/Forgeron.png', iconSize: [32, 32], iconAnchor: [16,32], popupAnchor: [0, -32] });
-var iconAlchimiste = L.icon({ iconUrl: 'icon/Alchimiste.png', iconSize: [32, 32], iconAnchor: [16,32], popupAnchor: [0, -32] });
-var iconQuete = L.icon({ iconUrl: 'icon/Quete.png', iconSize: [32, 32], iconAnchor: [16,32], popupAnchor: [0, -32] });
-var iconSecret = L.icon({ iconUrl: 'icon/Secret.png', iconSize: [32, 32], iconAnchor: [16,32], popupAnchor: [0, -32] });
-var iconMob = L.icon({ iconUrl: 'icon/Mob.png', iconSize: [32, 32], iconAnchor: [16,32], popupAnchor: [0, -32] });
-var iconLieu = L.icon({ iconUrl: 'icon/Lieu.png', iconSize: [32, 32], iconAnchor: [16,32], popupAnchor: [0, -32] });
-var iconMarchand = L.icon({ iconUrl: 'icon/Marchand.png', iconSize: [32, 32], iconAnchor: [16,32], popupAnchor: [0, -32] });
-var iconDonjon = L.icon({ iconUrl: 'icon/Donjon.png', iconSize: [32, 32], iconAnchor: [16,32], popupAnchor: [0, -32] });
-var iconBoss = L.icon({ iconUrl: 'icon/Boss.png', iconSize: [32, 32], iconAnchor: [16,32], popupAnchor: [0, -32] });
-var iconRessources = L.icon({ iconUrl: 'icon/Ressources.png', iconSize: [32, 32], iconAnchor: [16,32], popupAnchor: [0, -32] });
-
-var markerValue={'Forgeron':1,'Alchimiste':1,'Quete':1,'Secret':1,'Mob':1,'Lieu':1,'Marchand':1,'Donjon':1,'Boss':1,'Ressources':1};
-var markerLayer={'Forgeron':markerForgeronLayer,'Alchimiste':markerAlchimisteLayer,'Quete':markerQueteLayer,'Secret':markerSecretLayer,'Mob':markerMobLayer,'Lieu':markerLieuLayer,'Marchand':markerMarchandLayer,'Donjon':markerDonjonLayer,'Boss':markerBossLayer,'Ressources':markerRessourcesLayer};
-var markerIcon={'Forgeron':iconForgeron,'Alchimiste':iconAlchimiste,'Quete':iconQuete,'Secret':iconSecret,'Mob':iconMob,'Lieu':iconLieu,'Marchand':iconMarchand,'Donjon':iconDonjon,'Boss':iconBoss,'Ressources':iconRessources};
+      divEtapes.forEach(d=>
+        d.style.display='none')
+      let id=e.target.id
+      console.log()
+      document.getElementById(id).classList.toggle('active')
+      document.getElementById(id.split(' ')[1]).style.display='grid'
 
 
-document.getElementById('ResetView').addEventListener('click',()=>{
-  map.fitBounds(initialbounds)
-})
-
-map.on('click',function(e){
-  console.log([e.latlng.lat,e.latlng.lng])
-})
-
-document.addEventListener('DOMContentLoaded', () => {
-    loadMarker()
+    })
+    palier.addEventListener('click',(e)=>{
+      fetch('/Paliers/'+e.target.id+'/index.html', { method: 'HEAD' })
+    .then(res => {
+        if (res.ok) {
+            window.location.href='/Paliers/'+e.target.id+'/index.html'
+        } else {
+            console.log('Le fichier n’existe pas.');
+        }
+    })
+    .catch(() => console.log('Erreur lors de la vérification.'));
+    })
 });
 
-
-function toggleMarker(button){
-  id=button.id
-  if (markerValue[id]){
-    markerValue[id]=0
-    map.removeLayer(markerLayer[id]);
-  }else{
-    markerValue[id]=1
-    map.addLayer(markerLayer[id]);
-  }
-}
-
-function loadMarker(){
-  var files=['Forgeron.json','Alchimiste.json','Quete.json','Secret.json','Mob.json','Lieu.json','Marchand.json','Donjon.json','Boss.json','Ressources.json']
-  files.forEach(chemin =>{
-    fetch('marker/'+chemin)
-    .then(response=> response.json())
-    .then(data=>{
-      data.forEach(element => {
-                var marker = L.marker(element.coord,{
-                  title:element.name,
-                  icon: markerIcon[chemin.split('.').slice(0,-1)]}).addTo(markerLayer[chemin.split('.').slice(0,-1)]);
-                marker.bindTooltip(element.name,{
-                  permanent:false,
-                  direction:"top",
-                  offset:[0,-10]
-                })
-                marker.categorie=element.categorie
-                marker.data=element
-                marker.on('click',function(e){
-                  affichageDescription(e.target.data)
-                })
-            });
-            
-
+document.addEventListener('DOMContentLoaded',()=>{
+  let changelog=document.getElementById('changelog')
+  fetch("/changelog.txt")
+  .then(response=>{
+    return response.text()})
+  .then(text=>{
+    const lines=text.split(/\r?\n/);
+    lines.forEach(line => {
+      const p=document.createElement('p')
+      p.textContent=line;
+      changelog.appendChild(p)
     })
-  }) 
-}
-
-function affichageDescription(data){
-  let div=document.getElementById('info');
-  div.innerHTML=""
-  if(data.name){
-    let h1=document.createElement('h1')
-    h1.textContent=data.name
-    div.appendChild(h1)
-  }
-  if(data.description){
-    data.description.forEach(desc =>{
-      let p=document.createElement('p')
-      p.textContent=desc
-      div.appendChild(p)
-    })
-    
-  }
-  if(data.coordGame){
+  })
+  .catch(err => {
+    console.error("Erreur :", err);
     let p=document.createElement('p')
-    p.textContent="X= "+data.coordGame[0]+" / Y= "+data.coordGame[1]+" / Z= "+data.coordGame[2]
-    div.appendChild(p)
-  }
-}
-
-const boutons = document.querySelectorAll('.btn-categorie');
-
-boutons.forEach(bouton => {
-  bouton.addEventListener('click', () => {
-    bouton.classList.toggle('active');
+    p.textContent="Impossible de charger le changelog."
+    changelog.appendChild(p);
   });
-});
+
+})

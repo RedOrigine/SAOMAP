@@ -72,6 +72,11 @@
 
 -Correction de certaines typo
 
+### **Version 1.4-hotfix:**
+
+
+-Bouton de choix de palier centré
+
 &nbsp;
 
 ### **Prochainement:**

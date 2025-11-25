@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'SAO UI';
-    src: url('/SAOMAP/SAOUI-Regular.woff2') format('woff2'),
-        url('/SAOMAP/SAOUI-Regular.woff') format('woff');
+    src: url('/SAOMAP/font/SAOUI-Regular.woff2') format('woff2'),
+        url('/SAOMAP/font/SAOUI-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -14,7 +14,10 @@ html, body {
   height: 100%;    
   min-height: 100vh;
   font-family: 'SAO UI';
-  background: linear-gradient(to bottom, lightblue ,darkblue, black)
+   background-image: url(/SAOMAP/image/paysage4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 
@@ -54,7 +57,6 @@ html, body {
     grid-column-start: 2;
     grid-row-start: 1;
     border-radius: 13px;
-    background: linear-gradient(45deg, white ,orange, lightgray,gray,black)
 }
 
 #carte {
@@ -73,7 +75,9 @@ html, body {
     height: 100%;               
     width: 100%;                
     border-radius: 15px;         
-    background: linear-gradient(45deg, orange, gray)}
+
+    background: rgba(255,255,255,0.6)
+}
 
 .buttonReset{
     

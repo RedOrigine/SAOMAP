@@ -20,11 +20,11 @@ import * as general from '/SAOMAP/scriptGeneral.js';
       mapEtage1Height = defaultImg.height;
       bounds = [[0, 0], [mapEtage1Height, mapEtage1Width]];
       initialbounds=bounds;
-      mapEtage1Overlay = L.imageOverlay("laby-1.png", bounds).addTo(mapEtage1);
+      mapEtage1Overlay = L.imageOverlay("image/laby-1.png", bounds).addTo(mapEtage1);
       mapEtage1.fitBounds(bounds);
       cartes['carte1']=[mapEtage1,valueLayerChemin,cheminLayer,valueLayerMarker,markerLayer,initialbounds]
     };
-    defaultImg.src = "laby-1.png"; 
+    defaultImg.src = "image/laby-1.png"; 
 
   //Layer:--------------------------------------------------------------------------------------------------------------------------------------------------------------------
     
@@ -114,11 +114,11 @@ import * as general from '/SAOMAP/scriptGeneral.js';
       mapEtage2Height = defaultImg2.height;
       bounds2 = [[0, 0], [mapEtage2Height, mapEtage2Width]];
       initialbounds2=bounds2;
-      mapEtage2Overlay = L.imageOverlay("laby-2.png", bounds2).addTo(mapEtage2);
+      mapEtage2Overlay = L.imageOverlay("image/laby-2.png", bounds2).addTo(mapEtage2);
       mapEtage2.fitBounds(bounds2);
       cartes['carte2']=[mapEtage2,valueLayerChemin2,cheminLayer2,valueLayerMarker2,markerLayer2,initialbounds2]
     };
-    defaultImg2.src = "laby-2.png"; 
+    defaultImg2.src = "image/laby-2.png"; 
 
   //Layer:--------------------------------------------------------------------------------------------------------------------------------------------------------------------
     
@@ -208,11 +208,11 @@ import * as general from '/SAOMAP/scriptGeneral.js';
       mapEtage3Height = defaultImg3.height;
       bounds3 = [[0, 0], [mapEtage3Height, mapEtage3Width]];
       initialbounds3=bounds3;
-      mapEtage3Overlay = L.imageOverlay("laby-3.png", bounds3).addTo(mapEtage3);
+      mapEtage3Overlay = L.imageOverlay("image/laby-3.png", bounds3).addTo(mapEtage3);
       mapEtage3.fitBounds(bounds3);
       cartes['carte3']=[mapEtage3,valueLayerChemin3,cheminLayer3,valueLayerMarker3,markerLayer3,initialbounds3]
     };
-    defaultImg3.src = "laby-3.png"; 
+    defaultImg3.src = "image/laby-3.png"; 
 
   //Layer:--------------------------------------------------------------------------------------------------------------------------------------------------------------------
     

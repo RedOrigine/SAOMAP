@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'SAO UI';
-    src: url('/SAOMAP/SAOUI-Regular.woff2') format('woff2'),
-        url('/SAOMAP/SAOUI-Regular.woff') format('woff');
+    src: url('/SAOMAP/font/SAOUI-Regular.woff2') format('woff2'),
+        url('/SAOMAP/font/SAOUI-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -14,17 +14,23 @@ html, body {
   height: 100%;    
   min-height: 100vh;
   font-family: 'SAO UI';
-  background: linear-gradient(to bottom, black ,darkgray, gray, orange,darkorange);
+  /* background: linear-gradient(to bottom, black ,darkgray, gray, orange,darkorange); */
   box-sizing: border-box;
+  
 
 }
 
-.parent1 {
+#parent1 {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between; 
   align-items: center;            
-  padding: 20px ;
+  /* padding: 20px ; */
+  background-image: url(/SAOMAP/image/castle.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .nom, .linkStart {
@@ -75,10 +81,15 @@ html, body {
 
 
 .parent2{
+    min-height: 100vh;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
     gap: 8px;
+    background-image: url(/SAOMAP/image/paysage1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     /* height: 100vh;
     width: 100vw; */
 }
@@ -93,19 +104,23 @@ html, body {
   margin: 0;
   padding: 20px;
   font-size: 6rem;
-  color: lightblue;
+  color: aqua;
 }
 .div3 {
     grid-column-start: 5;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    
+}
+#divnomguilde{
+  display: flex;
+  flex-direction: column;
 }
 .nomguilde{
-  font-size: 3rem;
-  transform: rotate(90deg);
-  background: linear-gradient(to top, orange, red);
-  -webkit-background-clip: text;
-  color: transparent;
+  font-size: 4rem;
+  margin: 0;
+  color: gray;
 }
 
 #logoguilde{
@@ -118,49 +133,105 @@ html, body {
     grid-column-start: 2;
     grid-row-start: 2;
     place-items: center;
-    gap:50px
+    gap:50px;
+    transform: translateY(-25px);
 }
 
 .btn-palier{
+display: flex;
   font-family: 'SAO UI';
-  font-size: 4rem;
-  width: 50vw;
-  height: 10vh;
+  font-size:2;
+  width: 40vw;
+  height: 8vh;
   padding: 0;
-  border-radius: 25px;
-  background: linear-gradient(90deg,black,darkred,red,darkorange, darkorange, red,darkred,black);
-  border: 1px solid black;
+  gap:10px;
+  background: white;
+  border: 0px solid white;
+  border-radius: 15px;
+  align-items: center;
+  justify-content: space-between;
+  opacity: 0.8;
 }
+.btn-palier:hover {
+  transform: scale(1.1); 
+}
+.p1{
+    position: absolute;
+  margin-left: 40px;
+  border-radius: 50%;
+  height: 60px;;
+  width: 60px;
+  color:white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  background-color: black;
 
+}
+.p2{
+    font-size: 2rem;
+    margin: 0 auto;
+}
 .div5 {
     grid-row: span 4 / span 4;
     grid-column-start: 1;
     grid-row-start: 2;
     display: grid;
     place-items: center;
-    gap:5px
+    gap:2.5px
 }
 #listeCatePalier{
-  margin: 5px;
-  padding: 5px;
+  margin: 2.5px;
+  padding: 2.5px;
   font-size: 2rem;
   text-decoration: underline;
+  color: aqua;
   
 }
 
 .btn-liste{
-  background: linear-gradient(90deg,black,darkred,red,darkorange, darkorange, red,darkred,black);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  opacity: 0.8;
   border-radius: 25px;
   border: 1px solid black;
-  width: 10vw;
-  height: 2.5vh;
+  width: 15vw;
+  height: 3vh;
 }
 .btn-liste.active{
-  background:linear-gradient(90deg,black,gray,lightgray,gray,black);
+  background:white;
+  opacity: 0.4;
+}
+.btn-liste:hover {
+  transform: scale(1.1); 
+}
+.p1liste{
+    position: absolute;
+  margin-left: 20px;
+  border-radius: 50%;
+  height: 27px;;
+  width: 27px;
+  color:white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  background-color: black;
+
+}
+.p2liste{
+    font-size: 1rem;
+    margin: 0 auto;
 }
 
 .div6 {
     grid-row: span 4 / span 4;
     grid-column-start: 5;
     grid-row-start: 2;
+    color:black;
+    opacity: 0.8;
+    
 }

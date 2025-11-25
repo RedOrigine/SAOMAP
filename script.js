@@ -33,17 +33,31 @@ document.addEventListener("DOMContentLoaded", () => {
       divEtape.id=+i+'-'+(i+4)
       divEtape.classList.add('div4')
       divEtapes.push(divEtape)
-      let listeButton=document.createElement('button');
+      let listeButton=document.createElement('div');
+      let p1liste=document.createElement('p')
+      let p2liste=document.createElement('p')
       listeButton.id='Palier '+i+'-'+(i+4);
-      listeButton.textContent='Palier '+i+'-'+(i+4);
+      p1liste.textContent=i+'-'+(i+4)
+      p2liste.textContent='Palier '+i+'-'+(i+4);
+      p1liste.classList.add('p1liste')
+      p2liste.classList.add('p2liste')
+      listeButton.appendChild(p1liste)
+      listeButton.appendChild(p2liste)
       listeButton.classList.add('btn-liste')
       liste.appendChild(listeButton)
       for(let j=0;j<=4;j++){
-        let button=document.createElement('button')
-        button.id='Palier'+(j+i)
-        button.textContent='Palier'+(j+i)
-        button.classList.add(('btn-palier'))
-        divEtape.appendChild(button)
+        let divButton=document.createElement('div')
+        let p1=document.createElement('p')
+        let p2=document.createElement('p')
+        divButton.id='Palier'+(j+i)
+        p1.textContent=(j+i)
+        p2.textContent='Palier'+(j+i)
+        p1.classList.add('p1')
+        p2.classList.add('p2')
+        divButton.appendChild(p1)
+        divButton.appendChild(p2)
+        divButton.classList.add(('btn-palier'))
+        divEtape.appendChild(divButton)
       }
       if(i==1){
         div.appendChild(divEtape)
@@ -55,25 +69,36 @@ document.addEventListener("DOMContentLoaded", () => {
       
     }
     liste.addEventListener('click',(e)=>{
-      if (!e.target.classList.contains('btn-liste')) return;
+      if(e.target.tagName==='P'){
+        var idListe=e.target.parentNode.id
+        var divListe=e.target.parentNode
+      }else{
+        var idListe=e.target.id
+        var divListe=e.target
+      }
+      if (!divListe.classList.contains('btn-liste')) return;
       document.querySelectorAll('.btn-liste').forEach(btn => btn.classList.add('active'));
-      e.target.classList.add('btn-liste');
+      divListe.classList.add('btn-liste');
 
 
       divEtapes.forEach(d=>
         d.style.display='none')
-      let id=e.target.id
       console.log()
-      document.getElementById(id).classList.toggle('active')
-      document.getElementById(id.split(' ')[1]).style.display='grid'
+      document.getElementById(idListe).classList.toggle('active')
+      document.getElementById(idListe.split(' ')[1]).style.display='grid'
 
 
     })
     palier.addEventListener('click',(e)=>{
-      fetch('/SAOMAP/Paliers/'+e.target.id+'/index.html', { method: 'HEAD' })
+      if(e.target.tagName==='P'){
+        var idPalier=e.target.parentNode.id
+      }else{
+        var idPalier=e.target.id
+      }
+      fetch('/SAOMAP/Paliers/'+idPalier+'/index.html', { method: 'HEAD' })
     .then(res => {
         if (res.ok) {
-            window.location.href='/SAOMAP/Paliers/'+e.target.id+'/index.html'
+            window.location.href='/SAOMAP/Paliers/'+idPalier+'/index.html'
         } else {
             console.log('Le fichier n’existe pas.');
         }

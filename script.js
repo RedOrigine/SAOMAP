@@ -107,24 +107,36 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 });
 
+// document.addEventListener('DOMContentLoaded',()=>{
+//   let changelog=document.getElementById('changelog')
+//   fetch("/SAOMAP/changelog.md")
+//   .then(response=>{
+//     return response.text()})
+//   .then(text=>{
+//     const lines=text.split(/\r?\n/);
+//     lines.forEach(line => {
+//       const p=document.createElement('p')
+//       p.textContent=line;
+//       changelog.appendChild(p)
+//     })
+//   })
+//   .catch(err => {
+//     console.error("Erreur :", err);
+//     let p=document.createElement('p')
+//     p.textContent="Impossible de charger le changelog."
+//     changelog.appendChild(p);
+//   });
+
+// })
 document.addEventListener('DOMContentLoaded',()=>{
-  let changelog=document.getElementById('changelog')
-  fetch("/SAOMAP/changelog.txt")
-  .then(response=>{
-    return response.text()})
-  .then(text=>{
-    const lines=text.split(/\r?\n/);
-    lines.forEach(line => {
-      const p=document.createElement('p')
-      p.textContent=line;
-      changelog.appendChild(p)
-    })
-  })
-  .catch(err => {
-    console.error("Erreur :", err);
-    let p=document.createElement('p')
-    p.textContent="Impossible de charger le changelog."
-    changelog.appendChild(p);
-  });
+  fetch('/SAOMAP/changelog.md')
+      .then(response => response.text())
+      .then(text => {
+        // Convertit le Markdown en HTML et l'injecte dans la div
+        document.getElementById('changelog').innerHTML = marked.parse(text);
+      })
+      .catch(err => console.error("Erreur lors du chargement du changelog:", err));
 
 })
+
+

@@ -109,10 +109,10 @@ export function affichageDescription(data){
 export function toggleEtage(button){
   let array={"etage1":"carte1","etage2":"carte2","etage3":"carte3"}
     for(let btn in array) {
-      if(btn==button.id && button.classList.value!="btn-categorie"){
+      if(btn==button.id && button.classList.value!="btn-choix-etage"){
         button.classList.toggle('active')
         document.getElementById(array[btn]).style.display='block'
-      }if(document.getElementById(btn).classList.value=="btn-categorie" && btn!= button.id){
+      }if(document.getElementById(btn).classList.value=="btn-choix-etage" && btn!= button.id){
         document.getElementById(btn).classList.toggle('active')
         document.getElementById(array[btn]).style.display='none'
 

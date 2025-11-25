@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="icon" type="image/png" href="/SAOMAP/image/logoguildetransparent.png">
+    <title>Aurarius Draconis</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
@@ -19,9 +20,9 @@
             <button type="button" id="ResetView" class="buttonReset"> Repositioner la map 🔄</button>
             <h1>Choix de l'étage</h1>
             <div id="choix_etage">
-              <button id="etage1" onclick="toggleEtage(this)" class="btn-categorie" >1</button>
-              <button id="etage2" onclick="toggleEtage(this)" class="btn-categorie active">2</button>
-              <button id="etage3" onclick="toggleEtage(this)" class="btn-categorie active">3</button>
+              <button id="etage1" onclick="toggleEtage(this)" class="btn-choix-etage" >1</button>
+              <button id="etage2" onclick="toggleEtage(this)" class="btn-choix-etage active">2</button>
+              <button id="etage3" onclick="toggleEtage(this)" class="btn-choix-etage active">3</button>
             </div>
             <h1>Catégorie :</h1>
             <div id="categorie_toggle">
@@ -31,9 +32,9 @@
             </div>
             <h1>Chemin :</h1>
             <div id="categorie_toggle">
-              <button id="CheminClassique" onclick="toggleLayerCheminLaby(this)" class="btn-categorie">Show chemin classique</button>
-              <button id="CheminForgeron" onclick="toggleLayerCheminLaby(this)" class="btn-categorie active">Show chemin Forgeron</button>
-              <button id="CheminOptionel" onclick="toggleLayerCheminLaby(this)" class="btn-categorie active">Show chemin Optionel</button>
+              <button id="CheminClassique" onclick="toggleLayerCheminLaby(this)" class="btn-categorie">Chemin Classique</button>
+              <button id="CheminForgeron" onclick="toggleLayerCheminLaby(this)" class="btn-categorie active">Chemin Forgeron</button>
+              <button id="CheminOptionnel" onclick="toggleLayerCheminLaby(this)" class="btn-categorie active">Chemin Optionnel</button>
             </div>
         </div>
       </div>

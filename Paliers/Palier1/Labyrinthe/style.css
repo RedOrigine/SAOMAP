@@ -81,37 +81,53 @@ html, body {
     overflow: auto;
 }
 .rectgris h1 {
-    margin: 5px 0;
+    margin: 3px 0;
 }
 
 .buttonReset{
     
     text-align: center;
-    padding: 0% 15% ;
+    width: 18vw;
+    height: 4vh;
     border-radius: 15px;
-    background-color: rgb(69, 75, 243);
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 100%;
+    border:1px solid white;
+    background-color: rgb(255, 255, 255,0.8);
+    font-family: 'SAO UI';
+    font-size: 1.5rem;
     font-weight: bold;
 }
 
 #categorie_toggle{
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    gap: 5px;
 }
 
 .btn-categorie{
-    padding: 0rem 1rem;
     border-radius: 15px;
-    background-color: orange;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 100%;
+    background-color:rgb(255, 255, 255,0.8);
+    font-family: 'SAO UI';
+    font-size: 1.5rem;
     font-weight: bold;
+    width: 9vw;
+    height: 4vh;
 
 }
 .btn-categorie.active{
     background-color: lightgray;
 }
 
+.btn-choix-etage{
+    border-radius: 15px;
+    background-color:rgb(255, 255, 255,0.8);
+    font-family: 'SAO UI';
+    font-size: 1rem;
+    font-weight: bold;
+    width: 3vw;
+    height: 3vh;
+}
+.btn-choix-etage.active{
+    background-color: lightgray;
+}

@@ -31,11 +31,11 @@ import * as general from '/SAOMAP/scriptGeneral.js';
     //Chemin:--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
       let cheminClassiqueLayer=L.layerGroup().addTo(mapEtage1);
-      let cheminOptionelLayer=L.layerGroup().addTo(mapEtage1);
+      let cheminOptionnelLayer=L.layerGroup().addTo(mapEtage1);
       let cheminForgeronLayer=L.layerGroup().addTo(mapEtage1);
       
       mapEtage1.removeLayer(cheminForgeronLayer);
-      mapEtage1.removeLayer(cheminOptionelLayer);
+      mapEtage1.removeLayer(cheminOptionnelLayer);
       
     //Marker:--------------------------------------------------------------------------------------------------------------------------------------------------------------------
     let markerForgeronLayer=L.layerGroup().addTo(mapEtage1)
@@ -53,40 +53,40 @@ import * as general from '/SAOMAP/scriptGeneral.js';
     var pointCheminSalle5=[ [260,28],[260,59],[197,60],[197,84],[202,84]]
     var pointCheminSalle6=[[313.5, 151.5], [307.5, 151.5]]
     var pointCheminForgeron1=[[260,28],[260,59],[197,60],[197,84],[202,84],[197,84],[197,116],[170,116],[170,170],[197,170],[197,189],[204,189]]
-    var pointCheminForgeron1PourOptionel=[[197,84.1],[197,116],[170,116],[170,170],[197,170],[197,189],[204,189]]
+    var pointCheminForgeron1PourOptionnel=[[197,84.1],[197,116],[170,116],[170,170],[197,170],[197,189],[204,189]]
     var pointCheminForgeron2=[[313.5, 88.5],[322.5, 88.5]]
 
       //Dessin des chemin(polyline):--------------------------------------------------------------------------------------------------------------------------------------------------------------------
         
         var polyline = L.polyline(pointCheminClassique, {color: 'blue'}).addTo(cheminClassiqueLayer);
         var polyline = L.polyline(pointCheminClassique, {color: 'blue'}).addTo(cheminForgeronLayer);
-        var polyline = L.polyline(pointCheminClassique, {color: 'blue'}).addTo(cheminOptionelLayer);
+        var polyline = L.polyline(pointCheminClassique, {color: 'blue'}).addTo(cheminOptionnelLayer);
         var polyline = L.polyline(pointCheminClassiqueQuete, {color: 'green'}).addTo(cheminClassiqueLayer);
         var polyline = L.polyline(pointCheminClassiqueQuete, {color: 'green'}).addTo(cheminForgeronLayer);
-        var polyline = L.polyline(pointCheminClassiqueQuete, {color: 'green'}).addTo(cheminOptionelLayer);
+        var polyline = L.polyline(pointCheminClassiqueQuete, {color: 'green'}).addTo(cheminOptionnelLayer);
         var polyline = L.polyline(pointCheminSalle1, {color: 'red'}).addTo(cheminClassiqueLayer);
-        var polyline = L.polyline(pointCheminSalle1, {color: 'red'}).addTo(cheminOptionelLayer);
+        var polyline = L.polyline(pointCheminSalle1, {color: 'red'}).addTo(cheminOptionnelLayer);
         var polyline = L.polyline(pointCheminSalle1, {color: 'red'}).addTo(cheminForgeronLayer);
         var polyline = L.polyline(pointCheminSalle2, {color: 'red'}).addTo(cheminClassiqueLayer);
-        var polyline = L.polyline(pointCheminSalle2, {color: 'red'}).addTo(cheminOptionelLayer);
+        var polyline = L.polyline(pointCheminSalle2, {color: 'red'}).addTo(cheminOptionnelLayer);
         var polyline = L.polyline(pointCheminSalle2, {color: 'red'}).addTo(cheminForgeronLayer);
-        var polyline = L.polyline(pointCheminSalle3, {color: 'red'}).addTo(cheminOptionelLayer);
-        var polyline = L.polyline(pointCheminSalle4, {color: 'red'}).addTo(cheminOptionelLayer);
-        var polyline = L.polyline(pointCheminSalle5, {color: 'red'}).addTo(cheminOptionelLayer);
+        var polyline = L.polyline(pointCheminSalle3, {color: 'red'}).addTo(cheminOptionnelLayer);
+        var polyline = L.polyline(pointCheminSalle4, {color: 'red'}).addTo(cheminOptionnelLayer);
+        var polyline = L.polyline(pointCheminSalle5, {color: 'red'}).addTo(cheminOptionnelLayer);
         var polyline = L.polyline(pointCheminSalle6, {color: 'red'}).addTo(cheminClassiqueLayer);
-        var polyline = L.polyline(pointCheminSalle6, {color: 'red'}).addTo(cheminOptionelLayer);
+        var polyline = L.polyline(pointCheminSalle6, {color: 'red'}).addTo(cheminOptionnelLayer);
         var polyline = L.polyline(pointCheminSalle6, {color: 'red'}).addTo(cheminForgeronLayer);
         var polyline = L.polyline(pointCheminForgeron1, {color: 'yellow'}).addTo(cheminForgeronLayer);
-        var polyline = L.polyline(pointCheminForgeron1PourOptionel, {color: 'yellow'}).addTo(cheminOptionelLayer);
+        var polyline = L.polyline(pointCheminForgeron1PourOptionnel, {color: 'yellow'}).addTo(cheminOptionnelLayer);
         var polyline = L.polyline(pointCheminForgeron2, {color: 'yellow'}).addTo(cheminClassiqueLayer);
-        var polyline = L.polyline(pointCheminForgeron2, {color: 'yellow'}).addTo(cheminOptionelLayer);
+        var polyline = L.polyline(pointCheminForgeron2, {color: 'yellow'}).addTo(cheminOptionnelLayer);
         var polyline = L.polyline(pointCheminForgeron2, {color: 'yellow'}).addTo(cheminForgeronLayer);
   
     //Arrays Chemin/Marker:--------------------------------------------------------------------------------------------------------------------------------------------------------------------
     
 
-      var valueLayerChemin={'CheminClassique':1,'CheminForgeron':0,'CheminOptionel':0}
-      var cheminLayer={'CheminClassique':cheminClassiqueLayer,'CheminForgeron':cheminForgeronLayer,'CheminOptionel':cheminOptionelLayer}
+      var valueLayerChemin={'CheminClassique':1,'CheminForgeron':0,'CheminOptionnel':0}
+      var cheminLayer={'CheminClassique':cheminClassiqueLayer,'CheminForgeron':cheminForgeronLayer,'CheminOptionnel':cheminOptionnelLayer}
       var valueLayerMarker={"Forgeron":1,"PointCle":1,"Salle":1}
       var markerLayer={"Forgeron":markerForgeronLayer,"PointCle":markerPointCleLayer,"Salle":markerSalleLayer}
 
@@ -125,11 +125,11 @@ import * as general from '/SAOMAP/scriptGeneral.js';
     //Chemin:--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
       let cheminClassiqueLayer2=L.layerGroup().addTo(mapEtage2);
-      let cheminOptionelLayer2=L.layerGroup().addTo(mapEtage2);
+      let cheminOptionnelLayer2=L.layerGroup().addTo(mapEtage2);
       let cheminForgeronLayer2=L.layerGroup().addTo(mapEtage2);
       
       mapEtage2.removeLayer(cheminForgeronLayer2);
-      mapEtage2.removeLayer(cheminOptionelLayer2);
+      mapEtage2.removeLayer(cheminOptionnelLayer2);
       
     //Marker:--------------------------------------------------------------------------------------------------------------------------------------------------------------------
     let markerForgeronLayer2=L.layerGroup().addTo(mapEtage2)
@@ -147,40 +147,40 @@ import * as general from '/SAOMAP/scriptGeneral.js';
     var pointCheminSalle5=[ [260,28],[260,59],[197,60],[197,84],[202,84]]
     var pointCheminSalle6=[[313.5, 151.5], [307.5, 151.5]]
     var pointCheminForgeron1=[[260,28],[260,59],[197,60],[197,84],[202,84],[197,84],[197,116],[170,116],[170,170],[197,170],[197,189],[204,189]]
-    var pointCheminForgeron1PourOptionel=[[197,84.1],[197,116],[170,116],[170,170],[197,170],[197,189],[204,189]]
+    var pointCheminForgeron1PourOptionnel=[[197,84.1],[197,116],[170,116],[170,170],[197,170],[197,189],[204,189]]
     var pointCheminForgeron2=[[313.5, 88.5],[322.5, 88.5]]
 
       //Dessin des chemin(polyline):--------------------------------------------------------------------------------------------------------------------------------------------------------------------
         
         var polyline = L.polyline(pointCheminClassique, {color: 'blue'}).addTo(cheminClassiqueLayer2);
         var polyline = L.polyline(pointCheminClassique, {color: 'blue'}).addTo(cheminForgeronLayer2);
-        var polyline = L.polyline(pointCheminClassique, {color: 'blue'}).addTo(cheminOptionelLayer2);
+        var polyline = L.polyline(pointCheminClassique, {color: 'blue'}).addTo(cheminOptionnelLayer2);
         var polyline = L.polyline(pointCheminClassiqueQuete, {color: 'green'}).addTo(cheminClassiqueLayer2);
         var polyline = L.polyline(pointCheminClassiqueQuete, {color: 'green'}).addTo(cheminForgeronLayer2);
-        var polyline = L.polyline(pointCheminClassiqueQuete, {color: 'green'}).addTo(cheminOptionelLayer2);
+        var polyline = L.polyline(pointCheminClassiqueQuete, {color: 'green'}).addTo(cheminOptionnelLayer2);
         var polyline = L.polyline(pointCheminSalle1, {color: 'red'}).addTo(cheminClassiqueLayer2);
-        var polyline = L.polyline(pointCheminSalle1, {color: 'red'}).addTo(cheminOptionelLayer2);
+        var polyline = L.polyline(pointCheminSalle1, {color: 'red'}).addTo(cheminOptionnelLayer2);
         var polyline = L.polyline(pointCheminSalle1, {color: 'red'}).addTo(cheminForgeronLayer2);
         var polyline = L.polyline(pointCheminSalle2, {color: 'red'}).addTo(cheminClassiqueLayer2);
-        var polyline = L.polyline(pointCheminSalle2, {color: 'red'}).addTo(cheminOptionelLayer2);
+        var polyline = L.polyline(pointCheminSalle2, {color: 'red'}).addTo(cheminOptionnelLayer2);
         var polyline = L.polyline(pointCheminSalle2, {color: 'red'}).addTo(cheminForgeronLayer2);
-        var polyline = L.polyline(pointCheminSalle3, {color: 'red'}).addTo(cheminOptionelLayer2);
-        var polyline = L.polyline(pointCheminSalle4, {color: 'red'}).addTo(cheminOptionelLayer2);
-        var polyline = L.polyline(pointCheminSalle5, {color: 'red'}).addTo(cheminOptionelLayer2);
+        var polyline = L.polyline(pointCheminSalle3, {color: 'red'}).addTo(cheminOptionnelLayer2);
+        var polyline = L.polyline(pointCheminSalle4, {color: 'red'}).addTo(cheminOptionnelLayer2);
+        var polyline = L.polyline(pointCheminSalle5, {color: 'red'}).addTo(cheminOptionnelLayer2);
         var polyline = L.polyline(pointCheminSalle6, {color: 'red'}).addTo(cheminClassiqueLayer2);
-        var polyline = L.polyline(pointCheminSalle6, {color: 'red'}).addTo(cheminOptionelLayer2);
+        var polyline = L.polyline(pointCheminSalle6, {color: 'red'}).addTo(cheminOptionnelLayer2);
         var polyline = L.polyline(pointCheminSalle6, {color: 'red'}).addTo(cheminForgeronLayer2);
         var polyline = L.polyline(pointCheminForgeron1, {color: 'yellow'}).addTo(cheminForgeronLayer2);
-        var polyline = L.polyline(pointCheminForgeron1PourOptionel, {color: 'yellow'}).addTo(cheminOptionelLayer2);
+        var polyline = L.polyline(pointCheminForgeron1PourOptionnel, {color: 'yellow'}).addTo(cheminOptionnelLayer2);
         var polyline = L.polyline(pointCheminForgeron2, {color: 'yellow'}).addTo(cheminClassiqueLayer2);
-        var polyline = L.polyline(pointCheminForgeron2, {color: 'yellow'}).addTo(cheminOptionelLayer2);
+        var polyline = L.polyline(pointCheminForgeron2, {color: 'yellow'}).addTo(cheminOptionnelLayer2);
         var polyline = L.polyline(pointCheminForgeron2, {color: 'yellow'}).addTo(cheminForgeronLayer2);
   
     //Arrays Chemin/Marker:--------------------------------------------------------------------------------------------------------------------------------------------------------------------
     
 
-      var valueLayerChemin2={'CheminClassique':1,'CheminForgeron':0,'CheminOptionel':0}
-      var cheminLayer2={'CheminClassique':cheminClassiqueLayer2,'CheminForgeron':cheminForgeronLayer2,'CheminOptionel':cheminOptionelLayer2}
+      var valueLayerChemin2={'CheminClassique':1,'CheminForgeron':0,'CheminOptionnel':0}
+      var cheminLayer2={'CheminClassique':cheminClassiqueLayer2,'CheminForgeron':cheminForgeronLayer2,'CheminOptionnel':cheminOptionnelLayer2}
       var valueLayerMarker2={"Forgeron":1,"PointCle":1,"Salle":1}
       var markerLayer2={"Forgeron":markerForgeronLayer2,"PointCle":markerPointCleLayer2,"Salle":markerSalleLayer2}
 
@@ -219,11 +219,11 @@ import * as general from '/SAOMAP/scriptGeneral.js';
     //Chemin:--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
       let cheminClassiqueLayer3=L.layerGroup().addTo(mapEtage3);
-      let cheminOptionelLayer3=L.layerGroup().addTo(mapEtage3);
+      let cheminOptionnelLayer3=L.layerGroup().addTo(mapEtage3);
       let cheminForgeronLayer3=L.layerGroup().addTo(mapEtage3);
       
       mapEtage3.removeLayer(cheminForgeronLayer3);
-      mapEtage3.removeLayer(cheminOptionelLayer3);
+      mapEtage3.removeLayer(cheminOptionnelLayer3);
       
     //Marker:--------------------------------------------------------------------------------------------------------------------------------------------------------------------
     let markerForgeronLayer3=L.layerGroup().addTo(mapEtage3)
@@ -241,40 +241,40 @@ import * as general from '/SAOMAP/scriptGeneral.js';
     var pointCheminSalle5=[ [260,28],[260,59],[197,60],[197,84],[202,84]]
     var pointCheminSalle6=[[313.5, 151.5], [307.5, 151.5]]
     var pointCheminForgeron1=[[260,28],[260,59],[197,60],[197,84],[202,84],[197,84],[197,116],[170,116],[170,170],[197,170],[197,189],[204,189]]
-    var pointCheminForgeron1PourOptionel=[[197,84.1],[197,116],[170,116],[170,170],[197,170],[197,189],[204,189]]
+    var pointCheminForgeron1PourOptionnel=[[197,84.1],[197,116],[170,116],[170,170],[197,170],[197,189],[204,189]]
     var pointCheminForgeron2=[[313.5, 88.5],[322.5, 88.5]]
 
       //Dessin des chemin(polyline):--------------------------------------------------------------------------------------------------------------------------------------------------------------------
         
         var polyline = L.polyline(pointCheminClassique, {color: 'blue'}).addTo(cheminClassiqueLayer3);
         var polyline = L.polyline(pointCheminClassique, {color: 'blue'}).addTo(cheminForgeronLayer3);
-        var polyline = L.polyline(pointCheminClassique, {color: 'blue'}).addTo(cheminOptionelLayer3);
+        var polyline = L.polyline(pointCheminClassique, {color: 'blue'}).addTo(cheminOptionnelLayer3);
         var polyline = L.polyline(pointCheminClassiqueQuete, {color: 'green'}).addTo(cheminClassiqueLayer3);
         var polyline = L.polyline(pointCheminClassiqueQuete, {color: 'green'}).addTo(cheminForgeronLayer3);
-        var polyline = L.polyline(pointCheminClassiqueQuete, {color: 'green'}).addTo(cheminOptionelLayer3);
+        var polyline = L.polyline(pointCheminClassiqueQuete, {color: 'green'}).addTo(cheminOptionnelLayer3);
         var polyline = L.polyline(pointCheminSalle1, {color: 'red'}).addTo(cheminClassiqueLayer3);
-        var polyline = L.polyline(pointCheminSalle1, {color: 'red'}).addTo(cheminOptionelLayer3);
+        var polyline = L.polyline(pointCheminSalle1, {color: 'red'}).addTo(cheminOptionnelLayer3);
         var polyline = L.polyline(pointCheminSalle1, {color: 'red'}).addTo(cheminForgeronLayer3);
         var polyline = L.polyline(pointCheminSalle2, {color: 'red'}).addTo(cheminClassiqueLayer3);
-        var polyline = L.polyline(pointCheminSalle2, {color: 'red'}).addTo(cheminOptionelLayer3);
+        var polyline = L.polyline(pointCheminSalle2, {color: 'red'}).addTo(cheminOptionnelLayer3);
         var polyline = L.polyline(pointCheminSalle2, {color: 'red'}).addTo(cheminForgeronLayer3);
-        var polyline = L.polyline(pointCheminSalle3, {color: 'red'}).addTo(cheminOptionelLayer3);
-        var polyline = L.polyline(pointCheminSalle4, {color: 'red'}).addTo(cheminOptionelLayer3);
-        var polyline = L.polyline(pointCheminSalle5, {color: 'red'}).addTo(cheminOptionelLayer3);
+        var polyline = L.polyline(pointCheminSalle3, {color: 'red'}).addTo(cheminOptionnelLayer3);
+        var polyline = L.polyline(pointCheminSalle4, {color: 'red'}).addTo(cheminOptionnelLayer3);
+        var polyline = L.polyline(pointCheminSalle5, {color: 'red'}).addTo(cheminOptionnelLayer3);
         var polyline = L.polyline(pointCheminSalle6, {color: 'red'}).addTo(cheminClassiqueLayer3);
-        var polyline = L.polyline(pointCheminSalle6, {color: 'red'}).addTo(cheminOptionelLayer3);
+        var polyline = L.polyline(pointCheminSalle6, {color: 'red'}).addTo(cheminOptionnelLayer3);
         var polyline = L.polyline(pointCheminSalle6, {color: 'red'}).addTo(cheminForgeronLayer3);
         var polyline = L.polyline(pointCheminForgeron1, {color: 'yellow'}).addTo(cheminForgeronLayer3);
-        var polyline = L.polyline(pointCheminForgeron1PourOptionel, {color: 'yellow'}).addTo(cheminOptionelLayer3);
+        var polyline = L.polyline(pointCheminForgeron1PourOptionnel, {color: 'yellow'}).addTo(cheminOptionnelLayer3);
         var polyline = L.polyline(pointCheminForgeron2, {color: 'yellow'}).addTo(cheminClassiqueLayer3);
-        var polyline = L.polyline(pointCheminForgeron2, {color: 'yellow'}).addTo(cheminOptionelLayer3);
+        var polyline = L.polyline(pointCheminForgeron2, {color: 'yellow'}).addTo(cheminOptionnelLayer3);
         var polyline = L.polyline(pointCheminForgeron2, {color: 'yellow'}).addTo(cheminForgeronLayer3);
   
     //Arrays Chemin/Marker:--------------------------------------------------------------------------------------------------------------------------------------------------------------------
     
 
-      var valueLayerChemin3={'CheminClassique':1,'CheminForgeron':0,'CheminOptionel':0}
-      var cheminLayer3={'CheminClassique':cheminClassiqueLayer3,'CheminForgeron':cheminForgeronLayer3,'CheminOptionel':cheminOptionelLayer3}
+      var valueLayerChemin3={'CheminClassique':1,'CheminForgeron':0,'CheminOptionnel':0}
+      var cheminLayer3={'CheminClassique':cheminClassiqueLayer3,'CheminForgeron':cheminForgeronLayer3,'CheminOptionnel':cheminOptionnelLayer3}
       var valueLayerMarker3={"Forgeron":1,"PointCle":1,"Salle":1}
       var markerLayer3={"Forgeron":markerForgeronLayer3,"PointCle":markerPointCleLayer3,"Salle":markerSalleLayer3}
 

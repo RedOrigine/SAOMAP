@@ -1,0 +1,38 @@
+[
+{
+    "name":"Salle1",
+    "categorie":"salle-2",
+    "coord":[364.5,211.5],
+    "icon":"iconSalle"
+},
+{
+    "name":"Salle2",
+    "categorie":"salle-2",
+    "coord":[343.5,118.5],
+    "icon":"iconSalle"
+
+},
+{
+    "name":"Salle3",
+    "categorie":"salle-2",
+    "coord":[163.5,292.5],
+    "icon":"iconSalle"
+},
+{
+    "name":"Salle4",
+    "categorie":"salle-2",
+    "coord":[235.5,16.5],
+    "icon":"iconSalle"
+},
+{
+    "name":"Salle5",
+    "categorie":"salle-2",
+    "coord":[88.5,10.5],
+    "icon":"iconSalle"
+},
+{
+    "name":"Salle6",
+    "categorie":"salle-2",
+    "coord":[61.5,190.5],
+    "icon":"iconSalle"
+}]

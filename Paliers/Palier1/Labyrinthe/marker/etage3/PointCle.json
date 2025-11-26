@@ -1,0 +1,20 @@
+
+[{
+    "name":"Début",
+    "categorie":"pointCle-3",
+    "coord":[448.5,217.5],
+    "icon":"iconDebut"
+},
+{
+    "name":"Enigme",
+    "categorie":"pointCle-3",
+    "coord":[109.5,307.5],
+    "icon":"iconEnigme"
+},
+{
+    "name":"Fin",
+    "categorie":"pointCle-3",
+    "coord":[190.5,79.5],
+    "icon":"iconFin"
+}]
+

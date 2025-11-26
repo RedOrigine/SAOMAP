@@ -46,43 +46,43 @@ import * as general from '/SAOMAP/scriptGeneral.js';
 
   //Chemin:--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-    var pointCheminClassique = [ [26, 32], [26, 316], [53,316], [53,230], [110,230], [110,176], [83,176], [83,60], [55,60], [55,29], [313,29], [313,280], [324,280] ];
-    var pointCheminClassiqueQuete=[ [53,316], [113,316], [113,325] ]
-    var pointCheminSalle1=[[25.5, 103.5],[19.5, 103.5]]
-    var pointCheminSalle2=[[25.5, 280.5],[19.5, 280.5]]
-    var pointCheminSalle3=[ [110,176], [137,176], [137,203], [168,203], [168,233], [222,233], [222,228]]
-    var pointCheminSalle4=[ [170,28],[169,59],[142,59],[142,115],[134,115]]
-    var pointCheminSalle5=[ [260,28],[260,59],[197,60],[197,84],[202,84]]
-    var pointCheminSalle6=[[313.5, 151.5], [307.5, 151.5]]
-    var pointCheminForgeron1=[[260,28],[260,59],[197,60],[197,84],[202,84],[197,84],[197,116],[170,116],[170,170],[197,170],[197,189],[204,189]]
-    var pointCheminForgeron1PourOptionnel=[[197,84.1],[197,116],[170,116],[170,170],[197,170],[197,189],[204,189]]
-    var pointCheminForgeron2=[[313.5, 88.5],[322.5, 88.5]]
+    var pointCheminClassiqueE1 = [ [26, 32], [26, 316], [53,316], [53,230], [110,230], [110,176], [83,176], [83,60], [55,60], [55,29], [313,29], [313,280], [324,280] ];
+    var pointCheminClassiqueQueteE1=[ [53,316], [113,316], [113,325] ]
+    var pointCheminSalle1E1=[[25.5, 103.5],[19.5, 103.5]]
+    var pointCheminSalle2E1=[[25.5, 280.5],[19.5, 280.5]]
+    var pointCheminSalle3E1=[ [110,176], [137,176], [137,203], [168,203], [168,233], [222,233], [222,228]]
+    var pointCheminSalle4E1=[ [170,28],[169,59],[142,59],[142,115],[134,115]]
+    var pointCheminSalle5E1=[ [260,28],[260,59],[197,60],[197,84],[202,84]]
+    var pointCheminSalle6E1=[[313.5, 151.5], [307.5, 151.5]]
+    var pointCheminForgeron1E1=[[260,28],[260,59],[197,60],[197,84],[202,84],[197,84],[197,116],[170,116],[170,170],[197,170],[197,189],[204,189]]
+    var pointCheminForgeron1PourOptionnelE1=[[197,84.1],[197,116],[170,116],[170,170],[197,170],[197,189],[204,189]]
+    var pointCheminForgeron2E1=[[313.5, 88.5],[322.5, 88.5]]
 
       //Dessin des chemin(polyline):--------------------------------------------------------------------------------------------------------------------------------------------------------------------
         
-        var polyline = L.polyline(pointCheminClassique, {color: 'blue'}).addTo(cheminClassiqueLayer);
-        var polyline = L.polyline(pointCheminClassique, {color: 'blue'}).addTo(cheminForgeronLayer);
-        var polyline = L.polyline(pointCheminClassique, {color: 'blue'}).addTo(cheminOptionnelLayer);
-        var polyline = L.polyline(pointCheminClassiqueQuete, {color: 'green'}).addTo(cheminClassiqueLayer);
-        var polyline = L.polyline(pointCheminClassiqueQuete, {color: 'green'}).addTo(cheminForgeronLayer);
-        var polyline = L.polyline(pointCheminClassiqueQuete, {color: 'green'}).addTo(cheminOptionnelLayer);
-        var polyline = L.polyline(pointCheminSalle1, {color: 'red'}).addTo(cheminClassiqueLayer);
-        var polyline = L.polyline(pointCheminSalle1, {color: 'red'}).addTo(cheminOptionnelLayer);
-        var polyline = L.polyline(pointCheminSalle1, {color: 'red'}).addTo(cheminForgeronLayer);
-        var polyline = L.polyline(pointCheminSalle2, {color: 'red'}).addTo(cheminClassiqueLayer);
-        var polyline = L.polyline(pointCheminSalle2, {color: 'red'}).addTo(cheminOptionnelLayer);
-        var polyline = L.polyline(pointCheminSalle2, {color: 'red'}).addTo(cheminForgeronLayer);
-        var polyline = L.polyline(pointCheminSalle3, {color: 'red'}).addTo(cheminOptionnelLayer);
-        var polyline = L.polyline(pointCheminSalle4, {color: 'red'}).addTo(cheminOptionnelLayer);
-        var polyline = L.polyline(pointCheminSalle5, {color: 'red'}).addTo(cheminOptionnelLayer);
-        var polyline = L.polyline(pointCheminSalle6, {color: 'red'}).addTo(cheminClassiqueLayer);
-        var polyline = L.polyline(pointCheminSalle6, {color: 'red'}).addTo(cheminOptionnelLayer);
-        var polyline = L.polyline(pointCheminSalle6, {color: 'red'}).addTo(cheminForgeronLayer);
-        var polyline = L.polyline(pointCheminForgeron1, {color: 'yellow'}).addTo(cheminForgeronLayer);
-        var polyline = L.polyline(pointCheminForgeron1PourOptionnel, {color: 'yellow'}).addTo(cheminOptionnelLayer);
-        var polyline = L.polyline(pointCheminForgeron2, {color: 'yellow'}).addTo(cheminClassiqueLayer);
-        var polyline = L.polyline(pointCheminForgeron2, {color: 'yellow'}).addTo(cheminOptionnelLayer);
-        var polyline = L.polyline(pointCheminForgeron2, {color: 'yellow'}).addTo(cheminForgeronLayer);
+        var polyline = L.polyline(pointCheminClassiqueE1, {color: 'blue'}).addTo(cheminClassiqueLayer);
+        var polyline = L.polyline(pointCheminClassiqueE1, {color: 'blue'}).addTo(cheminForgeronLayer);
+        var polyline = L.polyline(pointCheminClassiqueE1, {color: 'blue'}).addTo(cheminOptionnelLayer);
+        var polyline = L.polyline(pointCheminClassiqueQueteE1, {color: 'green'}).addTo(cheminClassiqueLayer);
+        var polyline = L.polyline(pointCheminClassiqueQueteE1, {color: 'green'}).addTo(cheminForgeronLayer);
+        var polyline = L.polyline(pointCheminClassiqueQueteE1, {color: 'green'}).addTo(cheminOptionnelLayer);
+        var polyline = L.polyline(pointCheminSalle1E1, {color: 'red'}).addTo(cheminClassiqueLayer);
+        var polyline = L.polyline(pointCheminSalle1E1, {color: 'red'}).addTo(cheminOptionnelLayer);
+        var polyline = L.polyline(pointCheminSalle1E1, {color: 'red'}).addTo(cheminForgeronLayer);
+        var polyline = L.polyline(pointCheminSalle2E1, {color: 'red'}).addTo(cheminClassiqueLayer);
+        var polyline = L.polyline(pointCheminSalle2E1, {color: 'red'}).addTo(cheminOptionnelLayer);
+        var polyline = L.polyline(pointCheminSalle2E1, {color: 'red'}).addTo(cheminForgeronLayer);
+        var polyline = L.polyline(pointCheminSalle3E1, {color: 'red'}).addTo(cheminOptionnelLayer);
+        var polyline = L.polyline(pointCheminSalle4E1, {color: 'red'}).addTo(cheminOptionnelLayer);
+        var polyline = L.polyline(pointCheminSalle5E1, {color: 'red'}).addTo(cheminOptionnelLayer);
+        var polyline = L.polyline(pointCheminSalle6E1, {color: 'red'}).addTo(cheminClassiqueLayer);
+        var polyline = L.polyline(pointCheminSalle6E1, {color: 'red'}).addTo(cheminOptionnelLayer);
+        var polyline = L.polyline(pointCheminSalle6E1, {color: 'red'}).addTo(cheminForgeronLayer);
+        var polyline = L.polyline(pointCheminForgeron1E1, {color: 'yellow'}).addTo(cheminForgeronLayer);
+        var polyline = L.polyline(pointCheminForgeron1PourOptionnelE1, {color: 'yellow'}).addTo(cheminOptionnelLayer);
+        var polyline = L.polyline(pointCheminForgeron2E1, {color: 'yellow'}).addTo(cheminClassiqueLayer);
+        var polyline = L.polyline(pointCheminForgeron2E1, {color: 'yellow'}).addTo(cheminOptionnelLayer);
+        var polyline = L.polyline(pointCheminForgeron2E1, {color: 'yellow'}).addTo(cheminForgeronLayer);
   
     //Arrays Chemin/Marker:--------------------------------------------------------------------------------------------------------------------------------------------------------------------
     
@@ -142,43 +142,41 @@ import * as general from '/SAOMAP/scriptGeneral.js';
 
   //Chemin:--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-    var pointCheminClassique = [ [26, 32], [26, 316], [53,316], [53,230], [110,230], [110,176], [83,176], [83,60], [55,60], [55,29], [313,29], [313,280], [324,280] ];
-    var pointCheminClassiqueQuete=[ [53,316], [113,316], [113,325] ]
-    var pointCheminSalle1=[[25.5, 103.5],[19.5, 103.5]]
-    var pointCheminSalle2=[[25.5, 280.5],[19.5, 280.5]]
-    var pointCheminSalle3=[ [110,176], [137,176], [137,203], [168,203], [168,233], [222,233], [222,228]]
-    var pointCheminSalle4=[ [170,28],[169,59],[142,59],[142,115],[134,115]]
-    var pointCheminSalle5=[ [260,28],[260,59],[197,60],[197,84],[202,84]]
-    var pointCheminSalle6=[[313.5, 151.5], [307.5, 151.5]]
-    var pointCheminForgeron1=[[260,28],[260,59],[197,60],[197,84],[202,84],[197,84],[197,116],[170,116],[170,170],[197,170],[197,189],[204,189]]
-    var pointCheminForgeron1PourOptionnel=[[197,84.1],[197,116],[170,116],[170,170],[197,170],[197,189],[204,189]]
-    var pointCheminForgeron2=[[313.5, 88.5],[322.5, 88.5]]
+    var pointCheminClassiqueE2=[[361.5,271.5],[355.5,271.5],[355.5,307.5],[178.5,307.5],[178.5,292.5],[178.5,205.5],[127.5,205.5],[127.5,154.5],[100.5,154.5],[100.5,130.5],[151.5,130.5],[151.5,181.5],[205.5,181.5],[229.5,181.5],[280.5,181.5],[280.5,130.5],[253.5,130.5],[253.5,73.5],[262.5,73.5]]
+    var pointCheminEnigmeE2=[[253.5,73.5],[253.5,25.5],[73.5,25.5],[73.5,43.5],[67.5,43.5]]
+    var pointCheminSalle1_2E2=[ [355.5, 271.5], [355.5, 211.5] ,[361.5, 211.5] ,[355.5, 211.5],[355.5, 130.5], [343.5, 130.5] ,[343.5, 121.5]]
+    var pointCheminSalle3E2=[[178.5,292.5],[172.5,292.5]]
+    var pointCheminSalle4E2=[[235.5,25.5],[235.5,19.5]]
+    var pointCheminSalle5E2=[[88.5,25.5],[88.5,19.5]]
+    var pointCheminSalle6E2=[[[73.5,43.5],[73.5,190.5],[67.5,190.5]]]
+    var pointCheminForgeron1E2=[[178.5,259.5],[169.5,259.5]]
+    var pointCheminForgeron2E2=[[151.5,130.5],[178.5,130.5],[178.5,124.5],[184.5,124.5]]
 
       //Dessin des chemin(polyline):--------------------------------------------------------------------------------------------------------------------------------------------------------------------
         
-        var polyline = L.polyline(pointCheminClassique, {color: 'blue'}).addTo(cheminClassiqueLayer2);
-        var polyline = L.polyline(pointCheminClassique, {color: 'blue'}).addTo(cheminForgeronLayer2);
-        var polyline = L.polyline(pointCheminClassique, {color: 'blue'}).addTo(cheminOptionnelLayer2);
-        var polyline = L.polyline(pointCheminClassiqueQuete, {color: 'green'}).addTo(cheminClassiqueLayer2);
-        var polyline = L.polyline(pointCheminClassiqueQuete, {color: 'green'}).addTo(cheminForgeronLayer2);
-        var polyline = L.polyline(pointCheminClassiqueQuete, {color: 'green'}).addTo(cheminOptionnelLayer2);
-        var polyline = L.polyline(pointCheminSalle1, {color: 'red'}).addTo(cheminClassiqueLayer2);
-        var polyline = L.polyline(pointCheminSalle1, {color: 'red'}).addTo(cheminOptionnelLayer2);
-        var polyline = L.polyline(pointCheminSalle1, {color: 'red'}).addTo(cheminForgeronLayer2);
-        var polyline = L.polyline(pointCheminSalle2, {color: 'red'}).addTo(cheminClassiqueLayer2);
-        var polyline = L.polyline(pointCheminSalle2, {color: 'red'}).addTo(cheminOptionnelLayer2);
-        var polyline = L.polyline(pointCheminSalle2, {color: 'red'}).addTo(cheminForgeronLayer2);
-        var polyline = L.polyline(pointCheminSalle3, {color: 'red'}).addTo(cheminOptionnelLayer2);
-        var polyline = L.polyline(pointCheminSalle4, {color: 'red'}).addTo(cheminOptionnelLayer2);
-        var polyline = L.polyline(pointCheminSalle5, {color: 'red'}).addTo(cheminOptionnelLayer2);
-        var polyline = L.polyline(pointCheminSalle6, {color: 'red'}).addTo(cheminClassiqueLayer2);
-        var polyline = L.polyline(pointCheminSalle6, {color: 'red'}).addTo(cheminOptionnelLayer2);
-        var polyline = L.polyline(pointCheminSalle6, {color: 'red'}).addTo(cheminForgeronLayer2);
-        var polyline = L.polyline(pointCheminForgeron1, {color: 'yellow'}).addTo(cheminForgeronLayer2);
-        var polyline = L.polyline(pointCheminForgeron1PourOptionnel, {color: 'yellow'}).addTo(cheminOptionnelLayer2);
-        var polyline = L.polyline(pointCheminForgeron2, {color: 'yellow'}).addTo(cheminClassiqueLayer2);
-        var polyline = L.polyline(pointCheminForgeron2, {color: 'yellow'}).addTo(cheminOptionnelLayer2);
-        var polyline = L.polyline(pointCheminForgeron2, {color: 'yellow'}).addTo(cheminForgeronLayer2);
+      var polyline = L.polyline(pointCheminClassiqueE2, {color: 'blue'}).addTo(cheminClassiqueLayer2);
+      var polyline = L.polyline(pointCheminClassiqueE2, {color: 'blue'}).addTo(cheminOptionnelLayer2);
+      var polyline = L.polyline(pointCheminClassiqueE2, {color: 'blue'}).addTo(cheminForgeronLayer2);
+      var polyline = L.polyline(pointCheminEnigmeE2, {color: 'green'}).addTo(cheminClassiqueLayer2);
+      var polyline = L.polyline(pointCheminEnigmeE2, {color: 'green'}).addTo(cheminOptionnelLayer2);
+      var polyline = L.polyline(pointCheminEnigmeE2, {color: 'green'}).addTo(cheminForgeronLayer2);
+      var polyline = L.polyline(pointCheminForgeron1E2, {color: 'yellow'}).addTo(cheminClassiqueLayer2);
+      var polyline = L.polyline(pointCheminForgeron1E2, {color: 'yellow'}).addTo(cheminOptionnelLayer2);
+      var polyline = L.polyline(pointCheminForgeron1E2, {color: 'yellow'}).addTo(cheminForgeronLayer2);
+      var polyline = L.polyline(pointCheminForgeron2E2, {color: 'yellow'}).addTo(cheminOptionnelLayer2);
+      var polyline = L.polyline(pointCheminForgeron2E2, {color: 'yellow'}).addTo(cheminForgeronLayer2);
+      var polyline = L.polyline(pointCheminSalle1_2E2, {color: 'red'}).addTo(cheminOptionnelLayer2);
+      var polyline = L.polyline(pointCheminSalle3E2, {color: 'red'}).addTo(cheminClassiqueLayer2);
+      var polyline = L.polyline(pointCheminSalle3E2, {color: 'red'}).addTo(cheminForgeronLayer2);
+      var polyline = L.polyline(pointCheminSalle3E2, {color: 'red'}).addTo(cheminOptionnelLayer2);
+      var polyline = L.polyline(pointCheminSalle4E2, {color: 'red'}).addTo(cheminClassiqueLayer2);
+      var polyline = L.polyline(pointCheminSalle4E2, {color: 'red'}).addTo(cheminForgeronLayer2);
+      var polyline = L.polyline(pointCheminSalle4E2, {color: 'red'}).addTo(cheminOptionnelLayer2);
+      var polyline = L.polyline(pointCheminSalle5E2, {color: 'red'}).addTo(cheminClassiqueLayer2);
+      var polyline = L.polyline(pointCheminSalle5E2, {color: 'red'}).addTo(cheminForgeronLayer2);
+      var polyline = L.polyline(pointCheminSalle5E2, {color: 'red'}).addTo(cheminOptionnelLayer2);
+      var polyline = L.polyline(pointCheminSalle6E2, {color: 'red'}).addTo(cheminOptionnelLayer2);
+        
   
     //Arrays Chemin/Marker:--------------------------------------------------------------------------------------------------------------------------------------------------------------------
     
@@ -238,43 +236,37 @@ import * as general from '/SAOMAP/scriptGeneral.js';
 
   //Chemin:--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-    var pointCheminClassique = [ [26, 32], [26, 316], [53,316], [53,230], [110,230], [110,176], [83,176], [83,60], [55,60], [55,29], [313,29], [313,280], [324,280] ];
-    var pointCheminClassiqueQuete=[ [53,316], [113,316], [113,325] ]
-    var pointCheminSalle1=[[25.5, 103.5],[19.5, 103.5]]
-    var pointCheminSalle2=[[25.5, 280.5],[19.5, 280.5]]
-    var pointCheminSalle3=[ [110,176], [137,176], [137,203], [168,203], [168,233], [222,233], [222,228]]
-    var pointCheminSalle4=[ [170,28],[169,59],[142,59],[142,115],[134,115]]
-    var pointCheminSalle5=[ [260,28],[260,59],[197,60],[197,84],[202,84]]
-    var pointCheminSalle6=[[313.5, 151.5], [307.5, 151.5]]
-    var pointCheminForgeron1=[[260,28],[260,59],[197,60],[197,84],[202,84],[197,84],[197,116],[170,116],[170,170],[197,170],[197,189],[204,189]]
-    var pointCheminForgeron1PourOptionnel=[[197,84.1],[197,116],[170,116],[170,170],[197,170],[197,189],[204,189]]
-    var pointCheminForgeron2=[[313.5, 88.5],[322.5, 88.5]]
-
+    var pointCheminClassiqueE3=[[439.5,217.5],[436.5,217.5],[436.5,379.5],[376.5,379.5],[376.5,319.5],[406.5,319.5],[406.5,262.5],[349.5,262.5],[349.5,235.5],[292.5,235.5],[292.5,205.5],[235.5,205.5],[235.5,151.5],[265.5,151.5],[265.5,94.5],[190.5,94.5],[190.5,82.5],[190.5,94.5]]
+    var pointCheminEnigmeE3=[[190.5,94.5],[148.5,94.5],[148.5,307.5],[136.5,307.5]]
+    var pointCheminForgeron1E3=[[436.5,367.5],[445.5,367.5]]
+    var pointCheminForgeron2E3=[[148.5,157.5],[139.5,157.5]]
+    var pointCheminSalle1_2E3=[[436.5,217.5],[436.5,136.5],[448.5,136.5],[436.5,136.5],[436.5,91.5],[322.5,91.5],[322.5,106.5]]
+    var pointCheminSalle3E3=[[376.5,379.5],[337.5,379.5],[337.5,394.5]]
+    var pointCheminSalle4E3=[[292.5,235.5],[292.5,352.5],[352.5,352.5],[352.5,310.5],[337.5,310.5]]
+    var pointCheminSalle5E3=[[292.5,235.5],[235.5,235.5],[235.5,265.5],[196.5,265.5],[196.5,250.5]]
+    var pointCheminSalle6E3=[[250.5,94.5],[250.5,76.5]]
       //Dessin des chemin(polyline):--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        var polyline = L.polyline(pointCheminClassiqueE3, {color: 'blue'}).addTo(cheminClassiqueLayer3);
+        var polyline = L.polyline(pointCheminClassiqueE3, {color: 'blue'}).addTo(cheminOptionnelLayer3);
+        var polyline = L.polyline(pointCheminClassiqueE3, {color: 'blue'}).addTo(cheminForgeronLayer3);
+        var polyline = L.polyline(pointCheminEnigmeE3, {color: 'green'}).addTo(cheminClassiqueLayer3);
+        var polyline = L.polyline(pointCheminEnigmeE3, {color: 'green'}).addTo(cheminOptionnelLayer3);
+        var polyline = L.polyline(pointCheminEnigmeE3, {color: 'green'}).addTo(cheminForgeronLayer3);
+        var polyline = L.polyline(pointCheminForgeron1E3, {color: 'yellow'}).addTo(cheminClassiqueLayer3);
+        var polyline = L.polyline(pointCheminForgeron1E3, {color: 'yellow'}).addTo(cheminOptionnelLayer3);
+        var polyline = L.polyline(pointCheminForgeron1E3, {color: 'yellow'}).addTo(cheminForgeronLayer3);
+        var polyline = L.polyline(pointCheminForgeron2E3, {color: 'yellow'}).addTo(cheminClassiqueLayer3);
+        var polyline = L.polyline(pointCheminForgeron2E3, {color: 'yellow'}).addTo(cheminOptionnelLayer3);
+        var polyline = L.polyline(pointCheminForgeron2E3, {color: 'yellow'}).addTo(cheminForgeronLayer3);
+        var polyline = L.polyline(pointCheminSalle1_2E3, {color: 'red'}).addTo(cheminOptionnelLayer3);
+        var polyline = L.polyline(pointCheminSalle3E3, {color: 'red'}).addTo(cheminOptionnelLayer3);
+        var polyline = L.polyline(pointCheminSalle4E3, {color: 'red'}).addTo(cheminOptionnelLayer3);
+        var polyline = L.polyline(pointCheminSalle5E3, {color: 'red'}).addTo(cheminOptionnelLayer3);
+        var polyline = L.polyline(pointCheminSalle6E3, {color: 'red'}).addTo(cheminClassiqueLayer3);
+        var polyline = L.polyline(pointCheminSalle6E3, {color: 'red'}).addTo(cheminOptionnelLayer3);
+        var polyline = L.polyline(pointCheminSalle6E3, {color: 'red'}).addTo(cheminForgeronLayer3);
+
         
-        var polyline = L.polyline(pointCheminClassique, {color: 'blue'}).addTo(cheminClassiqueLayer3);
-        var polyline = L.polyline(pointCheminClassique, {color: 'blue'}).addTo(cheminForgeronLayer3);
-        var polyline = L.polyline(pointCheminClassique, {color: 'blue'}).addTo(cheminOptionnelLayer3);
-        var polyline = L.polyline(pointCheminClassiqueQuete, {color: 'green'}).addTo(cheminClassiqueLayer3);
-        var polyline = L.polyline(pointCheminClassiqueQuete, {color: 'green'}).addTo(cheminForgeronLayer3);
-        var polyline = L.polyline(pointCheminClassiqueQuete, {color: 'green'}).addTo(cheminOptionnelLayer3);
-        var polyline = L.polyline(pointCheminSalle1, {color: 'red'}).addTo(cheminClassiqueLayer3);
-        var polyline = L.polyline(pointCheminSalle1, {color: 'red'}).addTo(cheminOptionnelLayer3);
-        var polyline = L.polyline(pointCheminSalle1, {color: 'red'}).addTo(cheminForgeronLayer3);
-        var polyline = L.polyline(pointCheminSalle2, {color: 'red'}).addTo(cheminClassiqueLayer3);
-        var polyline = L.polyline(pointCheminSalle2, {color: 'red'}).addTo(cheminOptionnelLayer3);
-        var polyline = L.polyline(pointCheminSalle2, {color: 'red'}).addTo(cheminForgeronLayer3);
-        var polyline = L.polyline(pointCheminSalle3, {color: 'red'}).addTo(cheminOptionnelLayer3);
-        var polyline = L.polyline(pointCheminSalle4, {color: 'red'}).addTo(cheminOptionnelLayer3);
-        var polyline = L.polyline(pointCheminSalle5, {color: 'red'}).addTo(cheminOptionnelLayer3);
-        var polyline = L.polyline(pointCheminSalle6, {color: 'red'}).addTo(cheminClassiqueLayer3);
-        var polyline = L.polyline(pointCheminSalle6, {color: 'red'}).addTo(cheminOptionnelLayer3);
-        var polyline = L.polyline(pointCheminSalle6, {color: 'red'}).addTo(cheminForgeronLayer3);
-        var polyline = L.polyline(pointCheminForgeron1, {color: 'yellow'}).addTo(cheminForgeronLayer3);
-        var polyline = L.polyline(pointCheminForgeron1PourOptionnel, {color: 'yellow'}).addTo(cheminOptionnelLayer3);
-        var polyline = L.polyline(pointCheminForgeron2, {color: 'yellow'}).addTo(cheminClassiqueLayer3);
-        var polyline = L.polyline(pointCheminForgeron2, {color: 'yellow'}).addTo(cheminOptionnelLayer3);
-        var polyline = L.polyline(pointCheminForgeron2, {color: 'yellow'}).addTo(cheminForgeronLayer3);
   
     //Arrays Chemin/Marker:--------------------------------------------------------------------------------------------------------------------------------------------------------------------
     
@@ -291,8 +283,12 @@ import * as general from '/SAOMAP/scriptGeneral.js';
 // #region Code:--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 var cartes={}
 
-var filesMarker=['Forgeron.json',"PointCle.json","Salle.json"]
-  general.loadMarker(filesMarker,markerLayer)
+var filesMarker1=['etage1/Forgeron.json',"etage1/PointCle.json","etage1/Salle.json"]
+var filesMarker2=['etage2/Forgeron.json',"etage2/PointCle.json","etage2/Salle.json"]
+var filesMarker3=['etage3/Forgeron.json',"etage3/PointCle.json","etage3/Salle.json"]
+    general.loadMarker(filesMarker1,markerLayer)
+    general.loadMarker(filesMarker2,markerLayer2)
+    general.loadMarker(filesMarker3,markerLayer3)
   
   document.getElementById('ResetView').addEventListener('click',()=>{
     mapEtage1.fitBounds(initialbounds, { animate: false });
@@ -327,7 +323,7 @@ var filesMarker=['Forgeron.json',"PointCle.json","Salle.json"]
 //#endregion 
 
 //Methode Général(changer la map):--------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    // var map=mapEtage2
+    // var map=mapEtage3
     // const w=450;
     // const h=450;
 
@@ -337,12 +333,12 @@ var filesMarker=['Forgeron.json',"PointCle.json","Salle.json"]
     //     var cheminEntier=[]
     //     // Lignes horizontales
     //     for(let y = 0; y <= h; y += step){
-    //       gridLayer.addLayer(L.polyline([[y,0],[y,w]], {color:'gray', weight:1, opacity:0.5}));
+    //       gridLayer.addLayer(L.polyline([[y,0],[y,w]], {color:'black', weight:1, opacity:0.5}));
     //     }
 
     //     // Lignes verticales
     //     for(let x = 0; x <= w; x += step){
-    //       gridLayer.addLayer(L.polyline([[0,x],[h,x]], {color:'gray', weight:1, opacity:0.5}));
+    //       gridLayer.addLayer(L.polyline([[0,x],[h,x]], {color:'black', weight:1, opacity:0.5}));
     //     }
 
     //     gridLayer.addTo(map);
@@ -359,6 +355,6 @@ var filesMarker=['Forgeron.json',"PointCle.json","Salle.json"]
     //   const centerX = cellX + step / 2;
     //   const centerY = cellY + step / 2;
     //   cheminEntier.push([centerY, centerX])
-    //   console.log('Centre de la case :', [centerY, centerX]);
-    //   console.log('Chemin entier: ',cheminEntier)
+    //   // console.log('Centre de la case :', [centerY, centerX]);
+    //   console.log('Chemin entier: ',JSON.stringify(cheminEntier))
     // });

@@ -2,7 +2,7 @@
 
 
 
-## **Version actuelle: Version 1.4**
+## **Version actuelle: Version 1.6**
 
 
 
@@ -83,17 +83,18 @@
 -Correction de la taille des objets sur les plus petis écran (hors téléphone)(Correction de la responsivité)
 -Suppresion du bouton de zoom et du bouton d'information du module leaflet (module d'affichage de la carte)
 -Changement du border-radius des cartes labyrinthe(forme en arriere plan de la carte)
+-Suppression du logo de guilde/ logo discord des pages World/Labyrinthes
 
+### **Version 1.6**
+
+-Ajout Chemin + marqueur sur les etages 2 et 3 du labyrinthes
 
 &nbsp;
 
 ### **Prochainement:**
 
 
-
 -Ajout de bouton retour
-
--Ajout des chemins/marker pour l'étage 2/3
 
 -Ajout d'une musique de fond SAO 
 

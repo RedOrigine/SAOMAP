@@ -70,7 +70,7 @@ export function loadMarker(files,markerLayer){
                 var marker = L.marker(element.coord,{
                   title:element.name,
                   icon: icon.iconArray[element.icon]
-                }).addTo(markerLayer[chemin.split('.').slice(0,-1)])
+                }).addTo(markerLayer[chemin.split('/')[1].split('.')[0]])
                 marker.bindTooltip(element.name,{
                   permanent:false,
                   direction:"top",

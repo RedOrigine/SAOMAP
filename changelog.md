@@ -2,7 +2,7 @@
 
 
 
-## **Version actuelle: Version 1.6**
+## **Version actuelle: Version 1.6-hotfix**
 
 
 
@@ -88,6 +88,11 @@
 ### **Version 1.6**
 
 -Ajout Chemin + marqueur sur les etages 2 et 3 du labyrinthes
+
+### **Version 1.6-hotfix**
+
+-Reactivation de la page d'acceuil (désactivé au préalable pour des test )
+
 
 &nbsp;
 

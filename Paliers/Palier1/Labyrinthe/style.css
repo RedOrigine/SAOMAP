@@ -25,9 +25,8 @@ html, body {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
-    gap: 8px;
-    padding:4px;
-
+    gap: 0.9vh;
+    padding: 0.2vw;
 }
     
 .div1{
@@ -39,6 +38,8 @@ html, body {
     grid-row: span 2 / span 2;
     grid-column-start: 1;
     grid-row-start: 2;
+    height: 39vh;
+    width: 20vw;
 }
 
 
@@ -46,6 +47,8 @@ html, body {
     grid-row: span 2 / span 2;
     grid-column-start: 1;
     grid-row-start: 4;
+    height: 39vh;
+    width: 20vw;
 }
 
 .div4 {
@@ -62,9 +65,9 @@ html, body {
 }
 
 #carte1,#carte2,#carte3 {
-  width: 800px;
-  height: 800px;
-  border-radius: 25%;
+  width: 90vh;
+  height: 90vh;
+  border-radius: 15%;
   overflow: hidden;
   box-shadow: 0 0 30px rgba(0,0,0,0.8);
   background: black;
@@ -75,13 +78,14 @@ html, body {
     justify-content: flex-start;
     flex-direction: column;
     align-items: center;
-    height: 100%;
+    height: 39vh;
     border-radius: 15px;         
     background: rgba(255,255,255,0.6);
     overflow: auto;
 }
 .rectgris h1 {
-    margin: 3px 0;
+    margin: 0.2778vh 0;
+    font-size: 1.6vw;
 }
 
 .buttonReset{
@@ -90,10 +94,10 @@ html, body {
     width: 18vw;
     height: 4vh;
     border-radius: 15px;
-    border:1px solid white;
+    border:0x solid white;
     background-color: rgb(255, 255, 255,0.8);
     font-family: 'SAO UI';
-    font-size: 1.5rem;
+    font-size: 1.3vw;
     font-weight: bold;
 }
 
@@ -102,14 +106,14 @@ html, body {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    gap: 5px;
+    gap: 0.463vh;
 }
 
 .btn-categorie{
     border-radius: 15px;
     background-color:rgb(255, 255, 255,0.8);
     font-family: 'SAO UI';
-    font-size: 1.5rem;
+    font-size: 1.3vw;
     font-weight: bold;
     width: 9vw;
     height: 4vh;
@@ -123,7 +127,7 @@ html, body {
     border-radius: 15px;
     background-color:rgb(255, 255, 255,0.8);
     font-family: 'SAO UI';
-    font-size: 1rem;
+    font-size: 0.8vw;
     font-weight: bold;
     width: 3vw;
     height: 3vh;

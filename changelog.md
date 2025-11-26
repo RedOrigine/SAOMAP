@@ -77,6 +77,14 @@
 
 -Bouton de choix de palier centré
 
+### **Version 1.5**
+
+
+-Correction de la taille des objets sur les plus petis écran (hors téléphone)(Correction de la responsivité)
+-Suppresion du bouton de zoom et du bouton d'information du module leaflet (module d'affichage de la carte)
+-Changement du border-radius des cartes labyrinthe(forme en arriere plan de la carte)
+
+
 &nbsp;
 
 ### **Prochainement:**

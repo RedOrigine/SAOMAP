@@ -12,7 +12,7 @@ html, body {
   margin: 0;    
   padding: 0;     
   height: 100%;    
-  min-height: 100vh;
+  max-height: 100vh;
   font-family: 'SAO UI';
   /* background: linear-gradient(to bottom, black ,darkgray, gray, orange,darkorange); */
   box-sizing: border-box;
@@ -21,47 +21,37 @@ html, body {
 }
 
 #parent1 {
-  min-height: 100vh;
+  height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: space-between; 
   align-items: center;            
-  /* padding: 20px ; */
   background-image: url(/SAOMAP/image/castle.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.nom, .linkStart {
-  width: 90vw;         
+.nom, .linkStart { 
   text-align: center; 
-  padding: 10vh;
+  padding: 0;
 }
+.nom{
+   
 
+}
 
 #logo{
   width: 80vw;
-  
+   margin-top: 10vh;
 }     
- /* .nom {
-    
-    
-}
-
- #logo{
-  width: 150%;
-  
-} 
-
-.linkStart {
-   
-}  */
 
 .linkStart{
-  font-size: 70px;
+  font-size: 7vw;
   font-weight: bold;
   color:lightblue;
+  margin-top: 25vh;
 }
   
 .wave span {
@@ -85,13 +75,13 @@ html, body {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
-    gap: 8px;
+    gap: 0.7407vh;
     background-image: url(/SAOMAP/image/paysage1.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    /* height: 100vh;
-    width: 100vw; */
+    height: 100vh;
+    width: 100vw;
 }
     
 
@@ -102,8 +92,8 @@ html, body {
 
 #titleCP{
   margin: 0;
-  padding: 20px;
-  font-size: 6rem;
+  padding: 1.8519vh;
+  font-size: 6.5vw;
   color: aqua;
 }
 .div3 {
@@ -113,19 +103,12 @@ html, body {
     justify-content: space-between;
     
 }
+
 #divnomguilde{
   display: flex;
   flex-direction: column;
 }
-.nomguilde{
-  font-size: 4rem;
-  margin: 0;
-  color: gray;
-}
 
-#logoguilde{
-  height: 172px;
-}
 .div4 {
   display: grid;
     grid-column: span 3 / span 3;
@@ -135,18 +118,17 @@ html, body {
     justify-content: center; 
     align-content: center;
     place-items: center;
-    gap:50px;
-    transform: translateY(-25px);
+    gap:4vh;
 }
 
 .btn-palier{
 display: flex;
   font-family: 'SAO UI';
-  font-size:2;
+  font-size:2vw;
   width: 40vw;
   height: 8vh;
   padding: 0;
-  gap:10px;
+  gap:0.9259vh;
   background: white;
   border: 0px solid white;
   border-radius: 15px;
@@ -159,20 +141,20 @@ display: flex;
 }
 .p1{
     position: absolute;
-  margin-left: 40px;
+  margin-left: 4.7037vh;
   border-radius: 50%;
-  height: 60px;;
-  width: 60px;
+  height: 6.5556vh;;
+  width: 6.5556vh;
   color:white;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 30px;
+  font-size: 2.5vw;
   background-color: black;
 
 }
 .p2{
-    font-size: 2rem;
+    font-size: 2.5vw;
     margin: 0 auto;
 }
 .div5 {
@@ -181,12 +163,12 @@ display: flex;
     grid-row-start: 2;
     display: grid;
     place-items: center;
-    gap:2.5px
+    gap:0.2315vh;
 }
 #listeCatePalier{
-  margin: 2.5px;
-  padding: 2.5px;
-  font-size: 2rem;
+  margin: 0.2315vh;
+  padding: 0.2315vh;
+  font-size: 1.5vw;
   text-decoration: underline;
   color: aqua;
   
@@ -199,7 +181,7 @@ display: flex;
   background: white;
   opacity: 0.8;
   border-radius: 25px;
-  border: 1px solid black;
+  border: 0.0926vh solid black;
   width: 15vw;
   height: 3vh;
 }
@@ -212,20 +194,20 @@ display: flex;
 }
 .p1liste{
     position: absolute;
-  margin-left: 20px;
+  margin-left: 2.8519vh;
   border-radius: 50%;
-  height: 27px;;
-  width: 27px;
+  height: 2.9vh;;
+  width: 2.9vh;
   color:white;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 10px;
+  font-size: 0.5208vw;
   background-color: black;
 
 }
 .p2liste{
-    font-size: 1rem;
+    font-size: 1vw;
     margin: 0 auto;
 }
 

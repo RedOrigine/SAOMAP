@@ -38,7 +38,7 @@ html, body {
   height:10vh;
   width: 45vw;
   font-family: 'SAO UI';
-  font-size: 4rem;
+  font-size: 3.5vw;
 }
 .btn:hover{
   transform: scale(1.1);

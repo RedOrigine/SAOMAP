@@ -4,7 +4,9 @@ var map = L.map('carte', {
   crs: L.CRS.Simple,
   minZoom: -3,
   maxZoom: 2.5,
-  zoomSnap: 0.1
+  zoomSnap: 0.1,
+  zoomControl: false,
+  attributionControl: false
 });
 
 let mapWidth, mapHeight, bounds, mapOverlay,initialbounds;

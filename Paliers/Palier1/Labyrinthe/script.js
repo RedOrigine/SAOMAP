@@ -8,7 +8,9 @@ import * as general from '/SAOMAP/scriptGeneral.js';
       crs: L.CRS.Simple,
       minZoom: -3,
       maxZoom: 10,
-      zoomSnap: 0.1
+      zoomSnap: 0.1,
+      zoomControl: false,
+      attributionControl: false
     });
 
     let mapEtage1Width, mapEtage1Height, bounds, mapEtage1Overlay,initialbounds;
@@ -102,7 +104,9 @@ import * as general from '/SAOMAP/scriptGeneral.js';
       crs: L.CRS.Simple,
       minZoom: -3,
       maxZoom: 10,
-      zoomSnap: 0.1
+      zoomSnap: 0.1,
+      zoomControl: false,
+      attributionControl: false
     });
 
     let mapEtage2Width, mapEtage2Height, bounds2, mapEtage2Overlay,initialbounds2;
@@ -196,7 +200,9 @@ import * as general from '/SAOMAP/scriptGeneral.js';
       crs: L.CRS.Simple,
       minZoom: -3,
       maxZoom: 10,
-      zoomSnap: 0.1
+      zoomSnap: 0.1,
+      zoomControl: false,
+      attributionControl: false
     });
 
     let mapEtage3Width, mapEtage3Height, bounds3, mapEtage3Overlay,initialbounds3;

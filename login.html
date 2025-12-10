@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+</head>
+<body>
+  <h1>Connexion</h1>
+  <form id="loginForm">
+    <input type="email" id="loginEmail" placeholder="Email" required /><br/>
+    <input type="password" id="loginPassword" placeholder="Mot de passe" required /><br/>
+    <button type="submit">Se connecter</button>
+  </form>
+  <button id="resetBtn">Mot de passe oublié ?</button>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
+    import { getAuth, signInWithEmailAndPassword, sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
+    import { firebaseConfig } from './firebase-config.js';
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth();
+
+    // Login
+    const loginForm = document.getElementById("loginForm");
+    loginForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const email = document.getElementById("loginEmail").value;
+      const password = document.getElementById("loginPassword").value;
+
+      signInWithEmailAndPassword(auth, email, password)
+        .then(() => {
+          window.location.href = "/dashboard.html";
+        })
+        .catch(err => alert(err.message));
+    });
+
+    // Reset password
+    const resetBtn = document.getElementById("resetBtn");
+    resetBtn.addEventListener("click", () => {
+      const email = document.getElementById("loginEmail").value;
+      if (!email) {
+        alert("Veuillez entrer votre email pour réinitialiser le mot de passe");
+        return;
+      }
+      sendPasswordResetEmail(auth, email)
+        .then(() => alert("Email de réinitialisation envoyé !"))
+        .catch(err => alert(err.message));
+    });
+  </script>
+</body>
+</html>

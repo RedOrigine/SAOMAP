@@ -1,3 +1,4 @@
+
 import * as general from '/SAOMAP/scriptGeneral.js';
 
 var map = L.map('carte', {
@@ -54,14 +55,39 @@ document.getElementById('ResetView').addEventListener('click',()=>{
 })
 
 var files=['Forgeron.json','Alchimiste.json','Quete.json','Secret.json','Mob.json','Lieu.json','Marchand.json','Donjon.json','Boss.json','Ressources.json']
-general.loadMarkerWithDesc(files,markerLayer)
+general.loadMarkerWithDesc(files,markerLayer,()=>{
+  console.log('layer chargé')
+    general.remplissageUl(markerLayer)
+})
 
-
+document.addEventListener('click',(check=>{
+  const regex = /^.*-Ul$/;
+  if(check.target.tagName==='INPUT' && regex.test(check.target.parentNode.closest('ul').id)){
+    let id=check.target.parentNode.closest('ul').id.split('-')[0]
+    markerLayer[id].eachLayer(marker =>{
+      if(marker.data.name===check.target.id){
+        if(!check.target.checked){
+        marker.setOpacity(0.5)
+        marker.off('click')
+        marker.options.title=""
+      }
+      else{
+        marker.setOpacity(1)
+        marker.option=marker.data.name
+        marker.on('click',function(e){
+          general.affichageDescription(e.target.data)
+        })
+      }
+      }
+      
+    })
+  }
+  
+}))
 
 window.toggleLayerMarker = function(button){
   general.toggleLayerMarker(button,valueLayerMarker,markerLayer,map)
 }
-
 // function affichageDescription(data){
 //   let div=document.getElementById('info');
 //   div.innerHTML=""

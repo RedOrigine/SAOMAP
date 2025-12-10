@@ -20,7 +20,12 @@
             <button type="button" id="ResetView" class="buttonReset"> Repositioner la carte 🔄</button>
             <h1>Catégorie :</h1>
             <div id="categorie_toggle">
+                <div id='ForgeronMenu' class="menu">
                 <button id="Forgeron" onclick="toggleLayerMarker(this)" class="btn-categorie">Forgeron</button>
+                <ul id="Forgeron-Ul" class="submenu">
+
+                </ul>
+                </div>
                 <button id="Alchimiste" onclick="toggleLayerMarker(this)" class="btn-categorie">Alchimiste</button>
                 <button id="Quete" onclick="toggleLayerMarker(this)" class="btn-categorie">Quete</button>
                 <button id="Secret" onclick="toggleLayerMarker(this)" class="btn-categorie">Secret</button>
@@ -42,5 +47,20 @@
   </div>
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script type="module" src="script.js"></script>
+  <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
+    import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
+    import { firebaseConfig } from '/firebase-config.js';
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth();
+
+    // Vérifier si l'utilisateur est connecté
+    onAuthStateChanged(auth, (user) => {
+      if (!user) {
+        window.location.href = "/login.html";
+      }
+    });
+  </script>
 </body>
 </html>

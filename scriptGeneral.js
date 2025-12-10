@@ -35,7 +35,8 @@ export function toggleLayerMarker(button,valueLayerMarker,markerLayer,map){
   document.getElementById(id).classList.toggle('active');
 }
 
-export function loadMarkerWithDesc(files,markerLayer){
+export function loadMarkerWithDesc(files,markerLayer,callback){
+  let loaded=0
   files.forEach(chemin =>{
     fetch('marker/'+chemin)
     .then(response=> response.json())
@@ -56,6 +57,10 @@ export function loadMarkerWithDesc(files,markerLayer){
                   affichageDescription(e.target.data)
                 })
             });
+        loaded++;
+        if (loaded===files.length && callback){
+          callback();
+        }
             
 
     })
@@ -123,4 +128,27 @@ export function toggleEtage(button){
 
 export function wait(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+export function remplissageUl(markerLayer){
+  for(let key in markerLayer){
+    if(key==='Forgeron'){
+      let ul=document.getElementById(key+'-Ul')
+      let layer=markerLayer[key]
+      layer.eachLayer(marker=>{
+        let li=document.createElement('li')
+        let input=document.createElement('input')
+        let label=document.createElement('label')
+        input.id=marker.data.name
+        label.for=marker.data.name
+        label.textContent=marker.data.name
+        input.type='checkbox'
+        input.checked=true
+        li.appendChild(input)
+        li.appendChild(label)
+        ul.appendChild(li)
+      })
+    }
+    
+  }
 }

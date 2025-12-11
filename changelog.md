@@ -93,6 +93,12 @@
 
 -Reactivation de la page d'acceuil (désactivé au préalable pour des test )
 
+### **Version 1.7**
+
+-Ajout d'un système d'authentification via FireBase
+-Ajout d'une page login
+-Restructuration du projet
+
 
 &nbsp;
 

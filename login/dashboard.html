@@ -12,7 +12,7 @@
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
     import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
-    import { firebaseConfig } from './firebase-config.js';
+    import { firebaseConfig } from '/SAOMAP/scriptGeneral/firebase-config.js';
 
     const app = initializeApp(firebaseConfig);
     const auth = getAuth();
@@ -20,7 +20,7 @@
     // Vérifier si l'utilisateur est connecté
     onAuthStateChanged(auth, (user) => {
       if (!user) {
-        window.location.href = "login.html";
+        window.location.href = "/SAOMAP/login/login.html";
       }
     });
 
@@ -28,7 +28,7 @@
     const logoutBtn = document.getElementById("logoutBtn");
     logoutBtn.addEventListener("click", () => {
       signOut(auth).then(() => {
-        window.location.href = "login.html";
+        window.location.href = "/SAOMAP/login/login.html";
       });
     });
   </script>

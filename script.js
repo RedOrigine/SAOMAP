@@ -1,3 +1,4 @@
+
 const textElement = document.getElementById("waveText");
 const text = textElement.textContent;
 textElement.textContent = ""; // nettoie
@@ -10,13 +11,12 @@ text.split("").forEach((letter, i) => {
 });
 
 function afficherPagePalier(){
-    console.log('je suis la')
     let parent1=document.getElementById('parent1');
     let parent2=document.getElementById('parent2');
     parent1.style.display="none";
     parent2.style.display="grid";
 }
-
+window.afficherPagePalier=afficherPagePalier
 function retourPagePalier(){
     let parent1=document.getElementById('parent1');
     let parent2=document.getElementById('parent2');

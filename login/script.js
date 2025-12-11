@@ -1,22 +1,6 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <title>Login</title>
-</head>
-<body>
-  <h1>Connexion</h1>
-  <form id="loginForm">
-    <input type="email" id="loginEmail" placeholder="Email" required /><br/>
-    <input type="password" id="loginPassword" placeholder="Mot de passe" required /><br/>
-    <button type="submit">Se connecter</button>
-  </form>
-  <button id="resetBtn">Mot de passe oublié ?</button>
-
-  <script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
     import { getAuth, signInWithEmailAndPassword, sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
-    import { firebaseConfig } from './firebase-config.js';
+    import { firebaseConfig } from '/SAOMAP/scriptGeneral/firebase-config.js';
 
     const app = initializeApp(firebaseConfig);
     const auth = getAuth();
@@ -30,7 +14,7 @@
 
       signInWithEmailAndPassword(auth, email, password)
         .then(() => {
-          window.location.href = "/dashboard.html";
+          window.location.href = "/SAOMAP/index.html";
         })
         .catch(err => alert(err.message));
     });
@@ -47,6 +31,3 @@
         .then(() => alert("Email de réinitialisation envoyé !"))
         .catch(err => alert(err.message));
     });
-  </script>
-</body>
-</html>

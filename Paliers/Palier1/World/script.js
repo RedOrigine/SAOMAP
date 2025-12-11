@@ -1,5 +1,5 @@
 
-import * as general from '/SAOMAP/scriptGeneral.js';
+import * as general from '/SAOMAP/scriptGeneral/scriptGeneral.js';
 
 var map = L.map('carte', {
   crs: L.CRS.Simple,

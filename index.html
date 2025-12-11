@@ -13,29 +13,14 @@
             <img id="logo" src="/SAOMAP/image/logo.png" >
         </div>
         <div class="linkStart" >
-            <!-- <button class="wave" id="waveText" onclick="afficherPagePalier()"> Link Start </button> -->
             <p class="wave" id="waveText" onclick="afficherPagePalier()">Link Start</p>
         </div>
     </div>
-    <!-- <div id="parent2" style="display:block">
-        
-    </div> -->
     <div class="parent2" id='parent2' style="display:none">
     <div class="div1"></div>
     <div class="div2">
         <p id="titleCP">Choisir votre palier : </p>
     </div>
-    <!-- <div class="div3">
-        <div id="divnomguide">
-            <p class="nomguilde">Aurarius</p>
-            <p class="nomguilde">Draconis</p>
-        </div>
-        <div id="divlogoguilde">
-            <img src="/SAOMAP/logoguildepetit.png" id="logoguilde">
-        </div>
-        
-        
-    </div> -->
     <div class="div4" id="palier"></div>
     <div class="div5" id="liste">
        <p id="listeCatePalier">Palier :</p> 
@@ -44,26 +29,9 @@
         <p>Changelog :</p>
     </div>
 </div>
-
-        
-
-
+<script src="/SAOMAP/scriptGeneral/firebase.js" type="module"></script>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-<script src="script.js"></script>
-<script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
-    import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
-    import { firebaseConfig } from '/firebase-config.js';
+<script src="script.js"  type="module"></script>
 
-    const app = initializeApp(firebaseConfig);
-    const auth = getAuth();
-
-    // Vérifier si l'utilisateur est connecté
-    onAuthStateChanged(auth, (user) => {
-      if (!user) {
-        window.location.href = "/login.html";
-      }
-    });
-</script>
 </body>
 </html>

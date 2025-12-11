@@ -1,4 +1,4 @@
-import * as general from '/SAOMAP/scriptGeneral.js';
+import * as general from '/SAOMAP/scriptGeneral/scriptGeneral.js';
 
 // #region Etage 1:--------------------------------------------------------------------------------------------------------------------------------------------------------------------
   

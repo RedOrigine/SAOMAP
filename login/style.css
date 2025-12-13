@@ -15,7 +15,7 @@ html, body {
   width: 100vw;
   font-family: 'SAO UI';
   box-sizing: border-box;
-  background-color: black;
+  background-color: rgb(0,0,0,0.7);
 }
 
 .parent{
@@ -34,13 +34,27 @@ html, body {
   align-items: center;
   flex-direction: column;
   padding: 5vw;
+  width:40vw;
+  height: 60vh;
   border-radius: 12%;
   gap:2vh;
   background-color: rgb(255,255,255,0.8);
+
+  position: absolute;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+.classLoginDiv.active{
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 .classLoginDiv h1{
   font-size: 5vw;
-  padding: 0;
+  padding: 1.5vh;
   margin: 0;
 }
 .classLoginDiv form{
@@ -49,5 +63,36 @@ html, body {
   gap:0.2vh
 }
 .classLoginDiv input{
-  
+  font-family: "SAO UI";
+  padding: 1vh;
+  border: 0.2vh black;
+  border-radius: 0.5vw;
+  font-size: 4vh;
+  background-color: rgb(0, 200, 200,0.5);
+}
+
+.classLoginDiv button{
+  font-family: "SAO UI";
+  font-size: 4vh;
+  border-radius: 0.5vw;
+  padding:0.8vh;
+
+}
+
+.erreurConnection{
+  color: red;
+  font-size: 3vh;
+  visibility: hidden;
+}
+.erreurReset{
+  color: red;
+  font-size: 3vh;
+  visibility: hidden;
+  display: none;
+}
+
+.messageReset{
+  color: green;
+  font-size: 3vh;
+  visibility: hidden;
 }

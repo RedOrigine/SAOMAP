@@ -7,16 +7,25 @@
 </head>
 <body>
   <div class="parent">
-    <div id="loginDiv" class="classLoginDiv">
+    <div id="loginDiv" class="classLoginDiv active" >
       <h1>Connexion</h1>
       <form id="loginForm" >
         <input type="email" id="loginEmail" placeholder="Email" required /><br/>
         <input type="password" id="loginPassword" placeholder="Mot de passe" required /><br/>
         <button type="submit">Se connecter</button>
       </form>
+      <p id="erreurConnection" class="erreurConnection">Erreur dans l'adresse mail ou le mot de passe</p>
+      <button id="resetBtn">Mot de passe oublié ?</button>
     </div>
-    <div id="resetDiv" style="display:none">
-        <button id="resetBtn">Mot de passe oublié ?</button>
+    <div id="resetDiv"  class="classLoginDiv">
+      <h1>Changement de mot de passe</h1>
+      <form id="resetForm" >
+        <input type="email" id="resetEmail" placeholder="Email" required /><br/>
+        <button type="submit">Changer de mot de passe</button>
+      </form>
+      <p id="messageReset" class="messageReset">Si un compte existe, un email de réinitialisation a été envoyé</p>
+      <p id="erreurReset" class="erreurReset">Email invalide</p>
+      <button id="loginBtn">Se connecter</button>
     </div>
   </div>
   <script type="module" src="script.js"></script>

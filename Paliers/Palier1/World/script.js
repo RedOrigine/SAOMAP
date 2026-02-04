@@ -4,7 +4,7 @@ import * as general from '/SAOMAP/scriptGeneral/scriptGeneral.js';
 var map = L.map('carte', {
   crs: L.CRS.Simple,
   minZoom: -3,
-  maxZoom: 2.5,
+  maxZoom: 10,
   zoomSnap: 0.1,
   zoomControl: false,
   attributionControl: false
@@ -34,20 +34,9 @@ let markerMarchandLayer=L.layerGroup().addTo(map);
 let markerDonjonLayer=L.layerGroup().addTo(map);
 let markerBossLayer=L.layerGroup().addTo(map);
 let markerRessourcesLayer=L.layerGroup().addTo(map);
-// var iconForgeron = L.icon({ iconUrl: 'icon/Forgeron.png', iconSize: [32, 32], iconAnchor: [16,32], popupAnchor: [0, -32] });
-// var iconAlchimiste = L.icon({ iconUrl: 'icon/Alchimiste.png', iconSize: [32, 32], iconAnchor: [16,32], popupAnchor: [0, -32] });
-// var iconQuete = L.icon({ iconUrl: 'icon/Quete.png', iconSize: [32, 32], iconAnchor: [16,32], popupAnchor: [0, -32] });
-// var iconSecret = L.icon({ iconUrl: 'icon/Secret.png', iconSize: [32, 32], iconAnchor: [16,32], popupAnchor: [0, -32] });
-// var iconMob = L.icon({ iconUrl: 'icon/Mob.png', iconSize: [32, 32], iconAnchor: [16,32], popupAnchor: [0, -32] });
-// var iconLieu = L.icon({ iconUrl: 'icon/Lieu.png', iconSize: [32, 32], iconAnchor: [16,32], popupAnchor: [0, -32] });
-// var iconMarchand = L.icon({ iconUrl: 'icon/Marchand.png', iconSize: [32, 32], iconAnchor: [16,32], popupAnchor: [0, -32] });
-// var iconDonjon = L.icon({ iconUrl: 'icon/Donjon.png', iconSize: [32, 32], iconAnchor: [16,32], popupAnchor: [0, -32] });
-// var iconBoss = L.icon({ iconUrl: 'icon/Boss.png', iconSize: [32, 32], iconAnchor: [16,32], popupAnchor: [0, -32] });
-// var iconRessources = L.icon({ iconUrl: 'icon/Ressources.png', iconSize: [32, 32], iconAnchor: [16,32], popupAnchor: [0, -32] });
 
 var valueLayerMarker={'Forgeron':1,'Alchimiste':1,'Quete':1,'Secret':1,'Mob':1,'Lieu':1,'Marchand':1,'Donjon':1,'Boss':1,'Ressources':1};
 var markerLayer={'Forgeron':markerForgeronLayer,'Alchimiste':markerAlchimisteLayer,'Quete':markerQueteLayer,'Secret':markerSecretLayer,'Mob':markerMobLayer,'Lieu':markerLieuLayer,'Marchand':markerMarchandLayer,'Donjon':markerDonjonLayer,'Boss':markerBossLayer,'Ressources':markerRessourcesLayer};
-// var markerIcon={'Forgeron':iconForgeron,'Alchimiste':iconAlchimiste,'Quete':iconQuete,'Secret':iconSecret,'Mob':iconMob,'Lieu':iconLieu,'Marchand':iconMarchand,'Donjon':iconDonjon,'Boss':iconBoss,'Ressources':iconRessources};
 
 
 document.getElementById('ResetView').addEventListener('click',()=>{
@@ -57,57 +46,49 @@ document.getElementById('ResetView').addEventListener('click',()=>{
 var files=['Forgeron.json','Alchimiste.json','Quete.json','Secret.json','Mob.json','Lieu.json','Marchand.json','Donjon.json','Boss.json','Ressources.json']
 general.loadMarkerWithDesc(files,markerLayer,()=>{
   console.log('layer chargé')
-    general.remplissageUl(markerLayer)
 })
 
-document.addEventListener('click',(check=>{
-  const regex = /^.*-Ul$/;
-  if(check.target.tagName==='INPUT' && regex.test(check.target.parentNode.closest('ul').id)){
-    let id=check.target.parentNode.closest('ul').id.split('-')[0]
-    markerLayer[id].eachLayer(marker =>{
-      if(marker.data.name===check.target.id){
-        if(!check.target.checked){
-        marker.setOpacity(0.5)
-        marker.off('click')
-        marker.options.title=""
-      }
-      else{
-        marker.setOpacity(1)
-        marker.option=marker.data.name
-        marker.on('click',function(e){
-          general.affichageDescription(e.target.data)
-        })
-      }
-      }
-      
-    })
-  }
-  
-}))
+
 
 window.toggleLayerMarker = function(button){
   general.toggleLayerMarker(button,valueLayerMarker,markerLayer,map)
 }
-// function affichageDescription(data){
-//   let div=document.getElementById('info');
-//   div.innerHTML=""
-//   if(data.name){
-//     let h1=document.createElement('h1')
-//     h1.textContent=data.name
-//     div.appendChild(h1)
-//   }
-//   if(data.description){
-//     data.description.forEach(desc =>{
-//       let p=document.createElement('p')
-//       p.textContent=desc
-//       div.appendChild(p)
-//     })
-    
-//   }
-//   if(data.coordGame){
-//     let p=document.createElement('p')
-//     p.textContent="X= "+data.coordGame[0]+" / Y= "+data.coordGame[1]+" / Z= "+data.coordGame[2]
-//     div.appendChild(p)
-//   }
-// }
 
+
+//Methode Général(changer la map):--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    var map=map
+    const w=450;
+    const h=450;
+
+    // Ajouter une grille
+        const step = 3; // taille des cellules en pixels
+        const gridLayer = L.layerGroup();
+        var cheminEntier=[]
+        // Lignes horizontales
+        for(let y = 0; y <= h; y += step){
+          gridLayer.addLayer(L.polyline([[y,0],[y,w]], {color:'black', weight:1, opacity:0.5}));
+        }
+
+        // Lignes verticales
+        for(let x = 0; x <= w; x += step){
+          gridLayer.addLayer(L.polyline([[0,x],[h,x]], {color:'black', weight:1, opacity:0.5}));
+        }
+
+        gridLayer.addTo(map);
+
+        map.on('click', function(e) {
+      const lat = e.latlng.lat;
+      const lng = e.latlng.lng;
+
+      // Calculer l'origine de la cellule
+      const cellX = Math.floor(lng / step) * step;
+      const cellY = Math.floor(lat / step) * step;
+
+      // Coordonnées du centre de la cellule
+      const centerX = cellX + step / 2;
+      const centerY = cellY + step / 2;
+      cheminEntier.push([centerY, centerX])
+      // console.log('Centre de la case :', [centerY, centerX]);
+      console.log('Chemin entier: ',JSON.stringify(cheminEntier))
+      console.log([centerY, centerX])
+    });

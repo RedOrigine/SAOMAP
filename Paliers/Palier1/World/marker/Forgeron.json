@@ -2,5 +2,20 @@
     "name":"Forgeron de départ",
     "categorie":"forgeron",
     "coord":[1022.564793943396, 1768.369098584723],
+    "description":["Coordonnées: x:1768 z:4145","Craft: ","Armure/Armes niveau 1 et 3","Copper ingot","Bottes du revenant"],
+    "icon":"iconForgeron"
+},
+{
+    "name":"Forgeron Ingot",
+    "categorie":"forgeron",
+    "coord":[1591.5,2398.5],
+    "description":["Coordonnées: x:2399 z:3564","Craft: ","Copper ingot","Iron ingot"],
+    "icon":"iconForgeron"
+},
+{
+    "name":"Forgeron Tolbana(Entré)",
+    "categorie":"forgeron",
+    "coord":[3667.5, 3295.5],
+    "description":["Coordonnées: x:3291 z:1486","Craft: ","Armures/armes niveau 7"],
     "icon":"iconForgeron"
 }]

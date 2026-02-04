@@ -2,5 +2,36 @@
     "name":"Marchand d'hanaka",
     "categorie":"marchand",
     "coord":[1756.188079424439, 1509.0735943507887],
+    "description":["Coordonnées: x:1508 z:3415"],
+    "icon":"iconMarchand"
+},{
+    "name":"Marchand spawn",
+    "categorie":"marchand",
+    "coord":[997.5, 1801.5],
+    "description":["Coordonnées: ","Marchand normal: x 1788 z 4162","Marchand outils: x:1811 y:4149"],
+    "icon":"iconMarchand"
+},{
+    "name":"Marchand mizunari",
+    "categorie":"marchand",
+    "coord":[1444.5, 3130.5],
+    "description":["Coordonnées:","Marchand loot: x:3130 y:3708","Marchand loot: x:3147 y:3703"],
+    "icon":"iconMarchand"
+},{
+    "name":"Marchand tolba",
+    "categorie":"marchand",
+    "coord":[3559.5, 3307.5],
+    "description":["Coordonnées: x:3302 y:1596"],
+    "icon":"iconMarchand"
+},{
+    "name":"Marchand vallat",
+    "categorie":"marchand",
+    "coord":[2065.5, 412.5],
+    "description":["Coordonnées: x:411 y:3089"],
+    "icon":"iconMarchand"
+},{
+    "name":"Marchand vallat",
+    "categorie":"marchand",
+    "coord":[478.5, 2842.5],
+    "description":["Coordonnées: x:2833 y:4708"],
     "icon":"iconMarchand"
 }]

@@ -104,11 +104,6 @@ export function affichageDescription(data){
     })
     
   }
-  if(data.coordGame){
-    let p=document.createElement('p')
-    p.textContent="X= "+data.coordGame[0]+" / Y= "+data.coordGame[1]+" / Z= "+data.coordGame[2]
-    div.appendChild(p)
-  }
 }
 
 export function toggleEtage(button){
@@ -130,25 +125,3 @@ export function wait(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-export function remplissageUl(markerLayer){
-  for(let key in markerLayer){
-    if(key==='Forgeron'){
-      let ul=document.getElementById(key+'-Ul')
-      let layer=markerLayer[key]
-      layer.eachLayer(marker=>{
-        let li=document.createElement('li')
-        let input=document.createElement('input')
-        let label=document.createElement('label')
-        input.id=marker.data.name
-        label.for=marker.data.name
-        label.textContent=marker.data.name
-        input.type='checkbox'
-        input.checked=true
-        li.appendChild(input)
-        li.appendChild(label)
-        ul.appendChild(li)
-      })
-    }
-    
-  }
-}

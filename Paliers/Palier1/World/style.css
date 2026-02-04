@@ -85,6 +85,27 @@ html, body {
     margin: 0.5vh 0;
     font-size: 1.6vw;
 }
+.rectgris p {
+    margin: 0.5vh 0;
+    font-size: 1.2vw;
+}
+.rectgrisdesc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 39vh;              
+    border-radius: 15px;         
+    overflow-y: auto;
+    background: rgba(255,255,255,0.6)
+}
+.rectgrisdesc h1 {
+    margin: 0.5vh 0;
+    font-size: 1.6vw;
+}
+.rectgrisdesc p {
+    margin: 0.5vh 0;
+    font-size: 1.3vw;
+}
 .buttonReset{
     
     text-align: center;

@@ -2,5 +2,45 @@
     "name":"Zone au sanglier",
     "categorie":"mob",
     "coord":[1582.2186308660416, 1824.3957977409432],
+    "description":["Coordonnées: x:1800 z:3597","Mobs:","Sanglier","Pumba:","x:1987 z:3640","x:1880 z:3508","x:1756 z:3529"],
     "icon":"iconMob"
-}]
+},{
+    "name":"Zone au Loup",
+    "categorie":"mob",
+    "coord":[1183.5, 2422.5],
+    "description":["Coordonnées: x:2420 z:3966","Mobs:","Loup blanc/noir","Albal:","x:2499 z:3983","x:2614 z:3839","x:2409 z:3872"],
+    "icon":"iconMob"
+},{
+    "name":"Vallée des Loups",
+    "categorie":"mob",
+    "coord":[1183.5, 2422.5],
+    "description":["Coordonnées: x:2420 z:3966","Mobs:","Loup blanc/noir","Albal:","x:2499 z:3983","x:2614 z:3839","x:2409 z:3872"],
+    "icon":"iconMob"
+}
+,{
+    "name":"Ruines Maudites",
+    "categorie":"mob",
+    "coord":[712.5, 2827.5],
+    "description":["Coordonnées: x:2828 z:4437","Mobs:","Squelletes"],
+    "icon":"iconMob"
+},{
+    "name":"Village des bandits",
+    "categorie":"mob",
+    "coord":[1261.5, 4171.5],
+    "description":["Coordonnées: x:4158 z:3879","Mobs:","Bandit(tout)"],
+    "icon":"iconMob"
+},{
+    "name":"Zone des nephantes",
+    "categorie":"mob",
+    "coord":[1387.5, 3367.5],
+    "description":["Coordonnées: x:3369 z:3754","Mobs:","Nephantes"],
+    "icon":"iconMob"
+},{
+    "name":"Archipel des ikas",
+    "categorie":"mob",
+    "coord":[1051.5, 3292.5],
+    "description":["Coordonnées: x:3297 z:4096","Mobs:","Ika"],
+    "icon":"iconMob"
+}
+]
+

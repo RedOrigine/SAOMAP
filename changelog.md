@@ -99,6 +99,9 @@
 -Ajout d'une page login
 -Restructuration du projet
 
+### **Version 1.8**
+
+-Ajout de la map Kobold (provisoire)
 
 &nbsp;
 

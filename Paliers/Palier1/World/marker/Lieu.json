@@ -2,7 +2,42 @@
     "name":"Ville de départ",
     "categorie":"Lieu",
     "coord":[860.2837876610834, 1802.1693551526125],
-    "description":["Ville de départ"],
+    "description":["Coordonnées: x:1800 y:4286"],
+    "coordGame":[0,65,0],
+    "icon":"iconLieu"
+},{
+    "name":"Hanaka",
+    "categorie":"Lieu",
+    "coord":[1699.5, 1531.5],
+    "description":["Coordonnées: x:1538 y:3456"],
+    "coordGame":[0,65,0],
+    "icon":"iconLieu"
+},{
+    "name":"Candelia",
+    "categorie":"Lieu",
+    "coord":[4372.5, 1999.5],
+    "description":["Coordonnées: x:1995 y:157"],
+    "coordGame":[0,65,0],
+    "icon":"iconLieu"
+},{
+    "name":"Virelune",
+    "categorie":"Lieu",
+    "coord":[3181.5, 1579.5],
+    "description":["Coordonnées: x:1575 y:1969"],
+    "coordGame":[0,65,0],
+    "icon":"iconLieu"
+},{
+    "name":"Tolbana",
+    "categorie":"Lieu",
+    "coord":[3526.5, 3313.5],
+    "description":["Coordonnées: x:3308 y:1624"],
+    "coordGame":[0,65,0],
+    "icon":"iconLieu"
+},{
+    "name":"Mizunari",
+    "categorie":"Lieu",
+    "coord":[1468.5, 3139.5],
+    "description":["Coordonnées: x:3137 y:3685"],
     "coordGame":[0,65,0],
     "icon":"iconLieu"
 }]

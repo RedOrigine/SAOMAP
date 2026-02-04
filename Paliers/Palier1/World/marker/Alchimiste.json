@@ -3,5 +3,6 @@
     "name":"Alchimiste de départ",
     "categorie":"alchimiste",
     "coord":[1055.6220359638671, 1776.8543799589613],
+    "description":["Coordonnées: x:1775 z:4098","Craft: ","Potion de soin 1-3","Potion de mana 1-3","Cristal de soin"],
     "icon":"iconAlchimiste"
 }]

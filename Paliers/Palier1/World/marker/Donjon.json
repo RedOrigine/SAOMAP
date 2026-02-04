@@ -1,7 +1,29 @@
 [{
     "name":"Donjon Squelette",
     "categorie":"donjon",
-    "coord":[728.9387030556821, 2786.0725334074614],
-    "description":"Donjon Squelette",
+    "coord":[730.5,2785.5],
+    "description":["Coordonnées: x:2782 z:4425","Boss: Nasgul","Drop:","Tissu Maudit(mage)","Coeur putrefié(Miniboss)","Crinière de Nasgul(Boss)","Sabot de Nasgul(Boss)"],
     "icon":"iconDonjon"
-}]
+},
+{
+    "name":"Donjon Geldo",
+    "categorie":"donjon",
+    "coord":[1264.5,4273.5],
+    "description":["Coordonnées: x:4570 z:3891"],
+    "icon":"iconDonjon"
+},
+{
+    "name":"Donjon Zal'xirith",
+    "categorie":"donjon",
+    "coord":[3970.5,1027.5],
+    "description":["Coordonnées: x:1022 z:1181","Boss: Mère des araigné","Drop:","Venin d'araigné"],
+    "icon":"iconDonjon"
+},
+{
+    "name":"Labyrinthe du déchus",
+    "categorie":"donjon",
+    "coord":[2740.5,2386.5],
+    "description":["Coordonnées: x:2383 z:2420","Boss: Jumeau","Drop:","Piece de metal enchanté","Piece d'ame enchanté","Coffre:","Fragment rouge/jaune/violet"],
+    "icon":"iconDonjon"
+}
+]

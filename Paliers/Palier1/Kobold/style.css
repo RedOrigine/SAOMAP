@@ -1,0 +1,166 @@
+@font-face {
+    font-family: 'SAO UI';
+    src: url('/SAOMAP/font/SAOUI-Regular.woff2') format('woff2'),
+        url('/SAOMAP/font/SAOUI-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+html, body {
+  margin: 0;    
+  padding: 0;     
+  height: 100%;    
+  min-height: 100vh;
+  font-family: 'SAO UI';
+   background-image: url(/SAOMAP/image/paysage4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 0.7407vh;
+    padding:0.2083vw;
+}
+    
+.div1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.div2 {
+    grid-row: span 2 / span 2;
+    grid-column-start: 1;
+    grid-row-start: 2;
+    height: 39vh;
+    width: 20vw;
+}
+
+.div3 {
+    grid-row: span 2 / span 2;
+    grid-column-start: 1;
+    grid-row-start: 4;
+    height: 39vh;
+    width: 20vw;
+}
+
+.div4 {
+
+    display: flex;           
+    justify-content: center; 
+    align-items: center;
+    grid-column: span 4 / span 4;
+    grid-row: span 5 / span 5;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    border-radius: 13px;
+}
+
+#carte {
+  width: 90vh;
+  height: 90vh;
+  border-radius: 15%;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0,0,0,0.8);
+  background: black;
+}   
+
+.rectgris {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 39vh;              
+    border-radius: 15px;         
+
+    background: rgba(255,255,255,0.6)
+}
+.rectgris h1 {
+    margin: 0.5vh 0;
+    font-size: 1.6vw;
+}
+.rectgris p {
+    margin: 0.5vh 0;
+    font-size: 1.2vw;
+}
+.rectgrisdesc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 39vh;              
+    border-radius: 15px;         
+    overflow-y: auto;
+    background: rgba(255,255,255,0.6)
+}
+.rectgrisdesc h1 {
+    margin: 0.5vh 0;
+    font-size: 1.6vw;
+}
+.rectgrisdesc p {
+    margin: 0.5vh 0;
+    font-size: 1.3vw;
+}
+.buttonReset{
+    
+    text-align: center;
+    width: 18vw;
+    height: 4vh;
+    border-radius: 15px;
+    border:1px solid white;
+    background-color: rgb(255, 255, 255,0.8);
+    font-family: 'SAO UI';
+    font-size: 1.3vw;
+    font-weight: bold;
+}
+
+#categorie_toggle{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1vh;
+}
+
+.btn-categorie{
+    border-radius: 15px;
+    background-color:rgb(255, 255, 255,0.8);
+    font-family: 'SAO UI';
+    font-size: 1.3vw;
+    font-weight: bold;
+    width: 9vw;
+    height: 4vh;
+
+}
+.btn-categorie.active{
+    background-color: lightgray;
+}
+.menu{
+    position: relative;
+}
+.submenu{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: rgb(0, 0, 0,0.8);
+    left:100%;
+    border: 1px solid #ccc;
+    list-style: none;
+    top: 0;
+    padding: 10px;
+    margin: 0;
+    white-space: nowrap;
+    font-size: 1.4vw;
+    gap:0.7vh;
+    color: white;
+    
+}
+
+.menu:hover .submenu{
+    display: flex;
+}
